@@ -51,5 +51,40 @@
 					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
 				</div>
         	</section>
+        	<section class="col right">
+
+
+				<form class="messageForm">
+					
+					<div class="inputGroup halfWidth">
+						<input type="text" name="myname" required="required">
+						<label>Your Name</label>
+					</div>
+
+					<div class="inputGroup halfWidth">
+						<input type="email" name="email" required="required">
+						<label>Email</label>
+					</div>
+					<div class="inputGroup fullWidth">
+						<input type="text" name="subject" required="required">
+						<label>Subject</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<textarea required="required" name="message"></textarea>
+						<label>Say Something</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<button>Send Message</button>
+					</div>
+
+				</form>
+
+			</section>
+
+
+		</main>
+	</div>
 </body>
 </html>
