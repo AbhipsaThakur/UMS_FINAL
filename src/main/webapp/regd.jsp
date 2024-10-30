@@ -42,5 +42,23 @@
                     <div class="i">
                         <i class="fas fa-envelope"></i>
                     </div>
+                     <div class="div">
+                        <h5>Email</h5>
+                        <input type="email" class="input" name="email" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                    <h5>Password</h5>
+                        <input type="password" class="input" name="password" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
 </body>
 </html>
