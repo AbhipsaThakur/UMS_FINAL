@@ -29,6 +29,18 @@
                         <%= request.getAttribute("error") %>
                     <% } %>
                 </div>
-
+                    <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Username</h5>
+                        <input type="text" class="input" name="username" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-envelope"></i>
+                    </div>
 </body>
 </html>
