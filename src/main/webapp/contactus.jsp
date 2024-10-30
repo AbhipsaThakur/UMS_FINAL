@@ -51,5 +51,19 @@
 					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
 				</div>
         	</section>
+        	<section class="col right">
+
+
+				<form class="messageForm">
+					
+					<div class="inputGroup halfWidth">
+						<input type="text" name="myname" required="required">
+						<label>Your Name</label>
+					</div>
+
+					<div class="inputGroup halfWidth">
+						<input type="email" name="email" required="required">
+						<label>Email</label>
+					</div>
 </body>
 </html>
