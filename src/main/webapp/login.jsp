@@ -37,7 +37,23 @@
             grid-gap: 7rem;
             padding: 0 2rem;
         }
-        
+        .img {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .login-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
+
+        .img img {
+            width: 500px;
+            animation: bounce 2s infinite;
+        }
 </style>
 </head>
 <body>
