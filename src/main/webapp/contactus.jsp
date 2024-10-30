@@ -65,5 +65,26 @@
 						<input type="email" name="email" required="required">
 						<label>Email</label>
 					</div>
+					<div class="inputGroup fullWidth">
+						<input type="text" name="subject" required="required">
+						<label>Subject</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<textarea required="required" name="message"></textarea>
+						<label>Say Something</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<button>Send Message</button>
+					</div>
+
+				</form>
+
+			</section>
+
+
+		</main>
+	</div>
 </body>
 </html>
