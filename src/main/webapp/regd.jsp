@@ -60,5 +60,15 @@
                     <div class="i">
                         <i class="fas fa-lock"></i>
                     </div>
+                     <div class="div">
+                        <h5>Confirm Password</h5>
+                        <input type="password" class="input" name="confirmPassword" required>
+                    </div>
+                </div>
+                <input type="submit" class="btn" value="Register">
+                <div class="login-link">
+                    <a href="index.jsp">Already have an account? Login here</a>
+                </div>
+            </form>
 </body>
 </html>
