@@ -35,6 +35,12 @@
             justify-content: flex-end;
             align-items: center;
         }
+         .registration-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
         
 
 </body>
