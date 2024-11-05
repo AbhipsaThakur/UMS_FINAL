@@ -79,6 +79,22 @@ section.left .contactTitle p{
 	line-height: 1.2;
 	padding-bottom: 22px;
 }
+section.left .contactInfo{
+	margin-bottom: 16px;
+}
+.contactInfo .iconGroup{
+	display: flex;
+	align-items: center;
+	margin: 25px 0px;
+}
+.iconGroup .icon{
+	width: 45px;
+	height: 45px;
+	border: 2px solid dodgerblue;
+	border-radius: 50%;
+	margin-right: 20px;
+	position: relative;
+}
 </head>
 <body>
      <div class="container">
