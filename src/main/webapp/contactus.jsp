@@ -112,6 +112,23 @@ section.left .contactInfo{
 	text-transform: uppercase;
 	color: #ccc;
 }
+section.left .socialMedia{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 22px 0px 20px;
+}
+.socialMedia a{
+	width: 35px;
+	height: 35px;
+	text-decoration: none;
+	text-align: center;
+	margin-right: 15px;
+	border-radius: 5px;
+	background-color: dodgerblue;
+	transition: 0.4s;
+}
 </head>
 <body>
      <div class="container">
