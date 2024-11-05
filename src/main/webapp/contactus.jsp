@@ -219,6 +219,27 @@ textarea::-webkit-scrollbar-thumb{
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 	transition: 0.4s;
 }
+.inputGroup button:hover{
+	background-color: #2e2e2e;
+	color: dodgerblue;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+	border: 1px solid dodgerblue;
+}
+@media(max-width: 1100px){
+	.messageForm .halfWidth{
+		flex-basis: 100%;
+	}
+}
+@media(max-width: 900px){
+	.container .row{
+		flex-wrap: wrap;
+	}
+	.row section.left, .row section.right{
+		flex-basis: 100%;
+		margin: 0px;
+	}
+}
+	</style>
 </head>
 <body>
      <div class="container">
