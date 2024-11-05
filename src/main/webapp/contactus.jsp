@@ -145,7 +145,24 @@ section.left .socialMedia{
 .socialMedia a:hover i{
 	color: dodgerblue;
 }
+/* Code for the right section (column) */
 
+.row section.right .messageForm{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 30px;
+}
+.row section.right .inputGroup{
+	margin: 18px 0px;
+	position: relative;
+}
+.messageForm .halfWidth{
+	flex-basis: 48%;
+}
+.messageForm .fullWidth{
+	flex-basis: 100%;
+}
 </head>
 <body>
      <div class="container">
