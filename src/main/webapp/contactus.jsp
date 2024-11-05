@@ -47,6 +47,22 @@ body{
 .row section.right{
 	flex-basis: 60%;
 }
+section.left .contactTitle h2{
+	position: relative;
+	font-size: 28px;
+	color: #ddd;
+	display: inline-block;
+	margin-bottom: 25px;
+}
+section.left .contactTitle h2::before{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 1px;
+	background-color: #888;
+	top: 120%;
+	left: 0;
+}
 </head>
 <body>
      <div class="container">
