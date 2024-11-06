@@ -70,6 +70,26 @@
             <label for="feedback3">Your Thoughts:</label>
             <textarea id="feedback3" name="feedback3" rows="4" placeholder="Write your feedback here..."></textarea>
         </div>
+        <!-- Faculty 4 -->
+        <div class="faculty-section">
+            <div class="faculty-info">
+                <img src="img/avatar-removebg-preview.jpeg" alt="Faculty 4">
+                <div>
+                    <h3>Prof. Bishnupada Kamila</h3>
+                    <span>Subject: Spring Boot (Software Technology Domain)</span>
+                </div>
+            </div>
+            <label>Rate this faculty:</label>
+            <div class="rating">
+                <input type="radio" id="star5-4" name="rating4" value="5"><label for="star5-4">★</label>
+                <input type="radio" id="star4-4" name="rating4" value="4"><label for="star4-4">★</label>
+                <input type="radio" id="star3-4" name="rating4" value="3"><label for="star3-4">★</label>
+                <input type="radio" id="star2-4" name="rating4" value="2"><label for="star2-4">★</label>
+                <input type="radio" id="star1-4" name="rating4" value="1"><label for="star1-4">★</label>
+            </div>
+            <label for="feedback4">Your Thoughts:</label>
+            <textarea id="feedback4" name="feedback4" rows="4" placeholder="Write your feedback here..."></textarea>
+        </div>
 
 </body>
 </html>
