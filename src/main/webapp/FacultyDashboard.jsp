@@ -45,6 +45,35 @@
             background-color: red; color: white;
             border-radius: 50%; padding: 5px 8px; font-size: 14px;
         }
+        .sidebar {
+            background: linear-gradient(180deg, #e0e7fa, #d1fae5); /* Gentle gradient for sidebar */
+            color: #333;
+            height: 100%; width: 250px; position: fixed;
+            top: 0; left: -250px; transition: 0.3s; z-index: 999;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar ul li { padding: 15px; border-bottom: 1px solid #ccc; transition: background-color 0.3s; }
+        .sidebar ul li:hover { background-color: #d1fae5; } /* Light hover effect */
+        .sidebar ul li a { color: #333; text-decoration: none; display: block; transition: color 0.3s; }
+        .sidebar ul li a:hover { color: #6ca0dc; }
+        .sidebar.show { left: 0; }
+
+        .container { flex: 1; margin-top: 80px; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+
+        .welcome-message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #4a90e2; /* Softer blue for welcome message */
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+            width: 80%;
+        }
 </style>
 </head>
 <body>
