@@ -50,7 +50,38 @@
             cursor: pointer;
             margin-right: 10px;
         }
-        
+        .navbar .username {
+            font-size: 18px;
+            display: none;
+            position: absolute;
+            top: 40px; /* Adjusted to position below the user icon */
+            right: 0;
+            background-color: white;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .user-info:hover .username {
+            display: block;
+        }
+
+        .notification-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .notification-icon .badge {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 8px;
+            font-size: 14px;
+        }
 </style>
 </head>
 <body>
