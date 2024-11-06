@@ -91,7 +91,32 @@
             font-size: 14px;
             background-color: #f7f7f7;
         }
-      
+       input[type="submit"] {
+            width: 100%;
+            background-color: #4F63C2;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .faculty-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .faculty-info img {
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
 </style>
 </head>
 <body> 
