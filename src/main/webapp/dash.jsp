@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Student Dashboard</title>
+<<<<<<< Updated upstream
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
         html, body {
@@ -271,6 +272,11 @@
 <body>
      
     <div class="navbar">
+=======
+</head>
+<body>
+	<div class="navbar">
+>>>>>>> Stashed changes
         <div class="menu-icon" onclick="toggleSidebar()">
             <i class="fas fa-bars"></i>
         </div>
@@ -293,6 +299,7 @@
                 %>
             </div>
         </div>
+<<<<<<< Updated upstream
     </div>
     <div class="sidebar" id="sidebar">
         <ul>
@@ -368,5 +375,8 @@
             alert("Searching for: " + input);
         }
     </script>
+=======
+    </div> 
+>>>>>>> Stashed changes
 </body>
 </html>
