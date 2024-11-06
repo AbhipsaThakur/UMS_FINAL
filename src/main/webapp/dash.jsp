@@ -1,13 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Student Dashboard</title>
-<<<<<<< Updated upstream
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <!-- FontAwesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
         html, body {
             height: 100%;
         }
@@ -20,6 +24,7 @@
             margin: 0;
             padding: 0;
         }
+
         .navbar {
             background-color: #333;
             color: white;
@@ -51,6 +56,7 @@
             cursor: pointer;
             margin-right: 10px;
         }
+
         .navbar .username {
             font-size: 18px;
             display: none;
@@ -83,6 +89,7 @@
             padding: 5px 8px;
             font-size: 14px;
         }
+
         .sidebar {
             background-color: #444;
             color: white;
@@ -125,6 +132,7 @@
         .sidebar.show {
             left: 0;
         }
+
         .container {
             flex: 1; /* This allows the container to take up the remaining space */
             margin-top: 80px; /* Keep this to prevent overlap with the navbar */
@@ -154,6 +162,7 @@
             display: flex;
             justify-content: center;
         }
+
         .search-container input[type="text"] {
             width: 70%;
             padding: 10px;
@@ -182,6 +191,7 @@
             grid-gap: 20px;
             width: 80%;
         }
+
         .dashboard-item {
             background-color: white;
             border-radius: 8px;
@@ -213,6 +223,8 @@
             margin: 10px 0 0;
             font-weight: bold;
         }
+
+        /* Additional Styling for Icons */
         .attendance {
             background-color: #4CAF50;
             color: white;
@@ -242,6 +254,8 @@
             background-color: #9C27B0;
             color: white;
         }
+
+        /* Footer styles */
         footer {
             background-color: #333;
             color: white;
@@ -267,16 +281,12 @@
             text-decoration: none;
             color: inherit;
         }
-</style>
+    </style>
 </head>
+
 <body>
-     
+
     <div class="navbar">
-=======
-</head>
-<body>
-	<div class="navbar">
->>>>>>> Stashed changes
         <div class="menu-icon" onclick="toggleSidebar()">
             <i class="fas fa-bars"></i>
         </div>
@@ -299,8 +309,8 @@
                 %>
             </div>
         </div>
-<<<<<<< Updated upstream
     </div>
+
     <div class="sidebar" id="sidebar">
         <ul>
             <li><a href="#">Attendance</a></li>
@@ -315,6 +325,7 @@
             <li><a href="#">Projects</a></li>
         </ul>
     </div>
+
     <div class="container">
         <p class="welcome-message">Your success starts here!</p>
 
@@ -361,6 +372,7 @@
             </div>
         </div>
     </div>
+
     <footer>
         &copy; 2024 Your University. All rights reserved.
     </footer>
@@ -373,10 +385,10 @@
         function searchAttendance() {
             var input = document.getElementById('searchInput').value;
             alert("Searching for: " + input);
+            // Implement the search functionality here
         }
     </script>
-=======
-    </div> 
->>>>>>> Stashed changes
 </body>
+
 </html>
+    
