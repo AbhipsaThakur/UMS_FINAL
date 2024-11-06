@@ -92,5 +92,19 @@
             </div>
         </div>
     </div>
+    <footer>
+        &copy; 2024 Your University. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('show');
+        }
+
+        function searchAttendance() {
+            var input = document.getElementById('searchInput').value;
+            alert("Searching for: " + input);
+        }
+    </script>
 </body>
 </html>
