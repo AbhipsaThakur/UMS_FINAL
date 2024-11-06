@@ -34,6 +34,41 @@
             max-width: 400px;
             width: 100%;
         }
+         h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 </style>
 </head>
 <body>
