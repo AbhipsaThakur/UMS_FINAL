@@ -19,6 +19,38 @@
             margin: 0;
             padding: 0;
         }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .navbar .user-info {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .navbar .user-icon {
+            font-size: 25px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
 </style>
 </head>
 <body>
