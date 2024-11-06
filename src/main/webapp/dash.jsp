@@ -124,6 +124,35 @@
         .sidebar.show {
             left: 0;
         }
+        .container {
+            flex: 1; /* This allows the container to take up the remaining space */
+            margin-top: 80px; /* Keep this to prevent overlap with the navbar */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Search bar styles */
+        .search-container {
+            margin-bottom: 20px;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
 </style>
 </head>
 <body>
