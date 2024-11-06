@@ -50,6 +50,26 @@
             <label for="feedback2">Your Thoughts:</label>
             <textarea id="feedback2" name="feedback2" rows="4" placeholder="Write your feedback here..."></textarea>
         </div>
+        <!-- Faculty 3 -->
+        <div class="faculty-section">
+            <div class="faculty-info">
+                <img src="img/avatar-removebg-preview.jpeg" alt="Faculty 3">
+                <div>
+                    <h3>Prof. Rakesh Ray</h3>
+                    <span>Subject: Product Development (Software Technology Domain)</span>
+                </div>
+            </div>
+            <label>Rate this faculty:</label>
+            <div class="rating">
+                <input type="radio" id="star5-3" name="rating3" value="5"><label for="star5-3">★</label>
+                <input type="radio" id="star4-3" name="rating3" value="4"><label for="star4-3">★</label>
+                <input type="radio" id="star3-3" name="rating3" value="3"><label for="star3-3">★</label>
+                <input type="radio" id="star2-3" name="rating3" value="2"><label for="star2-3">★</label>
+                <input type="radio" id="star1-3" name="rating3" value="1"><label for="star1-3">★</label>
+            </div>
+            <label for="feedback3">Your Thoughts:</label>
+            <textarea id="feedback3" name="feedback3" rows="4" placeholder="Write your feedback here..."></textarea>
+        </div>
 
 </body>
 </html>
