@@ -95,5 +95,15 @@
         </div> <!-- End of dashboard items -->
     </div> <!-- End of dashboard grid -->
 </div>
+<footer>
+    &copy; 2024 Your Institution Name. All Rights Reserved.
+</footer>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("show");
+    }
+</script>
 </body>
 </html>
