@@ -82,6 +82,48 @@
             padding: 5px 8px;
             font-size: 14px;
         }
+        .sidebar {
+            background-color: #444;
+            color: white;
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            transition: 0.3s;
+            z-index: 999;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px;
+            border-bottom: 1px solid #555;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #555;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            color: #FFC107;
+        }
+
+        .sidebar.show {
+            left: 0;
+        }
 </style>
 </head>
 <body>
