@@ -44,5 +44,56 @@
             <li><a href="#">Feedback</a></li>
         </ul>
     </div>
+    <div class="container">
+        <p class="welcome-message">Welcome to the Faculty Dashboard</p>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-item">
+                <i class="fas fa-tasks"></i>
+                <p>Assignments</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-clock"></i>
+                <p>Time Table</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-chart-line"></i>
+                <p>Performance</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-calendar-check"></i>
+                <p>Attendance</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-user-friends"></i>
+                <p>Mentor Mentee</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-user-graduate"></i>
+                <p>Students</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-users"></i>
+                <p>Employees</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-file-alt"></i>
+                <p>Examination</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-book"></i>
+                <p>Question Bank</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-chart-bar"></i>
+                <p>Reports</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-comments"></i>
+                <p>Feedback</p>
+            </div>
+        </div> <!-- End of dashboard items -->
+    </div> <!-- End of dashboard grid -->
+</div>
 </body>
 </html>
