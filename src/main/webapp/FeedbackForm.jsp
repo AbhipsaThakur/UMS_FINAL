@@ -30,6 +30,26 @@
             <label for="feedback1">Your Thoughts:</label>
             <textarea id="feedback1" name="feedback1" rows="4" placeholder="Write your feedback here..."></textarea>
         </div>
+        <!-- Faculty 2 -->
+        <div class="faculty-section">
+            <div class="faculty-info">
+                <img src="img/avatar-removebg-preview.jpeg" alt="Faculty 2">
+                <div>
+                    <h3>Prof. Rashmi Prakash Swain</h3>
+                    <span>Subject: Android App Development (Software Technology Domain)</span>
+                </div>
+            </div>
+            <label>Rate this faculty:</label>
+            <div class="rating">
+                <input type="radio" id="star5-2" name="rating2" value="5"><label for="star5-2">★</label>
+                <input type="radio" id="star4-2" name="rating2" value="4"><label for="star4-2">★</label>
+                <input type="radio" id="star3-2" name="rating2" value="3"><label for="star3-2">★</label>
+                <input type="radio" id="star2-2" name="rating2" value="2"><label for="star2-2">★</label>
+                <input type="radio" id="star1-2" name="rating2" value="1"><label for="star1-2">★</label>
+            </div>
+            <label for="feedback2">Your Thoughts:</label>
+            <textarea id="feedback2" name="feedback2" rows="4" placeholder="Write your feedback here..."></textarea>
+        </div>
 
 </body>
 </html>
