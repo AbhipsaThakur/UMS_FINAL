@@ -5,6 +5,63 @@
 <head>
 <meta charset="UTF-8">
 <title>Feedback Form</title>
+<style>
+       body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        form {
+            padding: 30px;
+            width: 100%;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4F63C2;
+            font-size: 36px;
+            letter-spacing: 1px;
+        }
+
+        .faculty-section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .faculty-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .faculty-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #4F63C2;
+            margin-right: 20px;
+        }
+
+        .faculty-info h3 {
+            margin: 0;
+            font-size: 22px;
+            color: #4F63C2;
+        }
+
+        .faculty-info span {
+            display: block;
+            font-size: 16px;
+            color: #666;
+        }
+      
+</style>
 </head>
 <body> 
     <div class="feedback-container">
@@ -90,6 +147,7 @@
             <label for="feedback4">Your Thoughts:</label>
             <textarea id="feedback4" name="feedback4" rows="4" placeholder="Write your feedback here..."></textarea>
         </div>
-
+        <input type="submit" value="Submit Feedback">
+    </form>
 </body>
 </html>
