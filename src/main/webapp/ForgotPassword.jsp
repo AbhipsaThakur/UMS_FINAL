@@ -20,6 +20,27 @@
             %>
                 <div style="color: red; margin-bottom: 20px;"><%= errorMessage %></div>
             <% 
-            
+            session.removeAttribute("errorMessage");
+                } 
+                if (successMessage != null) {
+            %>
+                <div style="color: green; margin-bottom: 20px;"><%= successMessage %></div>
+            <%
+                    session.removeAttribute("successMessage");
+                }
+            %>
+
+            <!-- Forgot Password Form -->
+            <form action="SendResetMailServlet" method="post">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                <button type="submit" class="submit-btn">Reset Password</button>
+            </form>
+
+            <div class="back-to-login">
+                <a href="login.jsp">Back to Login</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
