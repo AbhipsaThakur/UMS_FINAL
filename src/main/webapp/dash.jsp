@@ -46,5 +46,51 @@
             <li><a href="#">Projects</a></li>
         </ul>
     </div>
+    <div class="container">
+        <p class="welcome-message">Your success starts here!</p>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-item attendance">
+                <i class="fas fa-calendar-check"></i>
+                <p>Attendance</p>
+            </div>
+            <div class="dashboard-item course">
+                <i class="fas fa-book"></i>
+                <p>Courses</p>
+            </div>
+            <div class="dashboard-item fees">
+                <i class="fas fa-dollar-sign"></i>
+                <p>Fees</p>
+            </div>
+            <div class="dashboard-item college-info">
+                <i class="fas fa-university"></i>
+                <p>College Info</p>
+            </div>
+            <div class="dashboard-item performance">
+                <i class="fas fa-chart-line"></i>
+                <p>Performance</p>
+            </div>
+            <div class="dashboard-item my-report-card">
+                <i class="fas fa-file-alt"></i>
+                <p>My Report Card</p>
+            </div>
+            <div class="dashboard-item feedback">
+                <i class="fas fa-comments"></i>
+                <p>Feedback</p>
+            </div>
+            <div class="dashboard-item time-table">
+                <i class="fas fa-clock"></i>
+                <p>Timetable</p>
+            </div>
+            <div class="dashboard-item assignment">
+                <i class="fas fa-tasks"></i>
+                <p>Assignments</p>
+            </div>
+            <div class="dashboard-item project">
+                <i class="fas fa-briefcase"></i>
+                <p>Projects</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
