@@ -26,6 +26,27 @@
             transform: translateY(-20px);
             animation: fadeInMove 1s forwards; /* Animation on load */
         }
+        .logout-message h2 {
+            font-size: 28px;
+            color: #4a90e2; /* Softer blue */
+        }
+
+        .logout-message p {
+            font-size: 16px;
+            color: #333;
+        }
+        @keyframes fadeInMove {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .redirect-message {
+            font-size: 14px;
+            margin-top: 15px;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1s;
+        }
 </style>
 </head>
 <body>
