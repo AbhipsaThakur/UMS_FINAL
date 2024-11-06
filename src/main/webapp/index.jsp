@@ -400,6 +400,32 @@
                 </div>
             </div>
         </section>
+        <section class="contact" id="contact">
+            <div class="contact-text">
+                <h2>Contact <span>Me</span></h2>
+                <h4>Let's Work Together</h4>
+                <p>I'm passionate about creating dynamic and engaging web experiences. If you have a project in mind or would like to collaborate, don’t hesitate to reach out!</p>
+                 <div class="contact-list">
+                    <li><i class='bx bxs-send' style='color:#0ef'></i>abhipsathakur933@gmail.com</li>
+                    <li><i class='bx bxs-phone' style='color:#0ef' ></i>+91 637** *****</li>
+                 </div>
+                 <div class="contact-icons">
+                    <a href=""><i class='bx bxl-linkedin-square' style='color:#0ef'></i></a>
+                    <a href=""><i class='bx bxl-facebook-circle' style='color:#0ef' ></i></a>
+                    <a href=""><i class='bx bxl-twitter' style='color:#0ef'></i></a>
+                    <a href=""><i class='bx bxl-instagram' style='color:#0ef' ></i></a>
+                 </div>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <input type="text" placeholder="Enter Your Home" required>
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <input type="text" placeholder="Enter Your Subject" required>
+                    <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                    <input type="submit" value="submit" class="send">
+                </form>
+            </div>
+        </section>  
     </main>
 
     <footer>
