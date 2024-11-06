@@ -292,6 +292,31 @@
         .social-media a:hover {
             color: #ffcc00;
         }
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 3rem;
+            padding: 50px 10%;
+        }
+        .contact-text h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .contact-form .send {
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #0ef;
+            color: #000;
+            font-weight: bold;
+        }
+        
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -402,11 +427,11 @@
         </section>
         <section class="contact" id="contact">
             <div class="contact-text">
-                <h2>Contact <span>Me</span></h2>
+                <h2>Contact With<span>Us</span></h2>
                 <h4>Let's Work Together</h4>
-                <p>I'm passionate about creating dynamic and engaging web experiences. If you have a project in mind or would like to collaborate, don’t hesitate to reach out!</p>
+                <p>We are here to assist you with any inquiries you may have.</p>
                  <div class="contact-list">
-                    <li><i class='bx bxs-send' style='color:#0ef'></i>abhipsathakur933@gmail.com</li>
+                    <li><i class='bx bxs-send' style='color:#0ef'></i>jagannathuniversityoftechnolog@gmail.com</li>
                     <li><i class='bx bxs-phone' style='color:#0ef' ></i>+91 637** *****</li>
                  </div>
                  <div class="contact-icons">
