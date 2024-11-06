@@ -181,6 +181,37 @@
             grid-gap: 20px;
             width: 80%;
         }
+        .dashboard-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .dashboard-item i {
+            font-size: 50px;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .dashboard-item:hover i {
+            color: #FFC107;
+        }
+
+        .dashboard-item p {
+            font-size: 18px;
+            margin: 10px 0 0;
+            font-weight: bold;
+        }
 </style>
 </head>
 <body>
