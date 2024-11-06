@@ -32,5 +32,19 @@
             </div>
         </div>
     </div>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Fees</a></li>
+            <li><a href="#">College Info</a></li>
+            <li><a href="#">Performance</a></li>
+            <li><a href="#">My Report Card</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Timetable</a></li>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+    </div>
 </body>
 </html>
