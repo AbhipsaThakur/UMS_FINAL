@@ -241,6 +241,31 @@
             background-color: #9C27B0;
             color: white;
         }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            margin-top: auto; /* This ensures the footer stays at the bottom */
+            animation: footerAnimation 5s infinite alternate;
+        }
+
+        @keyframes footerAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Link styling */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 </style>
 </head>
 <body>
