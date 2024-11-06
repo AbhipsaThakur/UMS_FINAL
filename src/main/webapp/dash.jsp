@@ -212,6 +212,35 @@
             margin: 10px 0 0;
             font-weight: bold;
         }
+        .attendance {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .course,
+        .fees {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .college-info,
+        .performance {
+            background-color: #FFC107;
+            color: white;
+        }
+
+        .my-report-card,
+        .feedback {
+            background-color: #FF5722;
+            color: white;
+        }
+
+        .time-table,
+        .assignment,
+        .project {
+            background-color: #9C27B0;
+            color: white;
+        }
 </style>
 </head>
 <body>
