@@ -47,7 +47,13 @@
             opacity: 0;
             animation: fadeIn 2s forwards 1s;
         }
+         @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
 </style>
+    <meta http-equiv="refresh" content="3;url=index.jsp" />
 </head>
 <body>
       <div class="logout-message">
