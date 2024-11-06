@@ -60,6 +60,37 @@
             font-size: 16px;
             color: #666;
         }
+      .rating {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .rating input[type="radio"] {
+            display: none;
+        }
+
+        .rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .rating input:checked ~ label,
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #FFD700;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            background-color: #f7f7f7;
+        }
       
 </style>
 </head>
