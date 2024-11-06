@@ -29,6 +29,20 @@
             </div>
         </div>
     </div>
-      
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Time Table</a></li>
+            <li><a href="#">Performance</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="#">Mentor Mentee</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Employees</a></li>
+            <li><a href="#">Examination</a></li>
+            <li><a href="#">Question Bank</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </div>
 </body>
 </html>
