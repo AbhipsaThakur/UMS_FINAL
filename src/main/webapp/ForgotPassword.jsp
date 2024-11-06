@@ -69,6 +69,29 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .back-to-login {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-to-login a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .back-to-login a:hover {
+            text-decoration: underline;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .forgot-password-box {
+                padding: 20px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
 </style>
 </head>
 <body>
