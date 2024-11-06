@@ -4,9 +4,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>reset password</title>
 </head>
 <body>
-
+      <h2>Reset Password</h2>
+    <% 
+        String token = request.getParameter("token");
+        if (token == null) {
+            out.print("Invalid reset token.");
+        } else {
+    %>
+    <form action="ResetPasswordServlet" method="post">
+        <input type="hidden" name="token" value="<%= token %>">
+        <label for="password">New Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Reset Password</button>
+    </form>
+    <% } %>
 </body>
 </html>
