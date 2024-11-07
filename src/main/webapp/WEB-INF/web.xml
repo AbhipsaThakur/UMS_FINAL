@@ -29,4 +29,14 @@
     <servlet-name>feedback_success</servlet-name>
     <url-pattern>/feedback_success</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResetPasswordServlet</display-name>
+    <servlet-name>ResetPasswordServlet</servlet-name>
+    <servlet-class>ResetPasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResetPasswordServlet</servlet-name>
+    <url-pattern>/ResetPasswordServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
