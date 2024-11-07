@@ -7,6 +7,11 @@
 <title>enrollement</title>
 </head>
 <body>
+     div class="container">
+        <div class="header">
+            <h1>Enrollment Details</h1>
+            <p>Complete your enrollment by providing the necessary information.</p>
+        </div>
 
 </body>
 </html>
