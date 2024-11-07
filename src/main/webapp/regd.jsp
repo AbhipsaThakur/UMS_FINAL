@@ -78,6 +78,18 @@
         }
 
         .input-div {
+         position: relative;
+            display: grid;
+            grid-template-columns: 7% 93%;
+            margin: 25px 0;
+            padding: 5px 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .input-div.one {
+            margin-top: 0;
+        }
+        
   </style>
 </head>
 <body>
