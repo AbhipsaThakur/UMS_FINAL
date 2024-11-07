@@ -58,7 +58,12 @@
                 <div class="input-div pass">
                     <div class="i">
                         <i class="fas fa-lock"></i>
-                    </div>                    
+                    </div>
+                    <div class="div">
+                        <h5>Confirm Password</h5>
+                        <input type="password" class="input" name="confirmPassword" required>
+                    </div>
+                </div>                    
 
 </body>
 </html>
