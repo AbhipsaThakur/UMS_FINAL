@@ -122,6 +122,19 @@
             height: 2px;
             background-color: #00c6ff;
             transition: .4s;
+             }
+
+        .input-div:before {
+            right: 50%;
+        }
+
+        .input-div:after {
+            left: 50%;
+        }
+
+        .input-div.focus:before, .input-div.focus:after {
+            width: 50%;
+        }
   </style>
 </head>
 <body>
