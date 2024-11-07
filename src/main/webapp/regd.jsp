@@ -63,7 +63,18 @@
                         <h5>Confirm Password</h5>
                         <input type="password" class="input" name="confirmPassword" required>
                     </div>
-                </div>                    
+                </div>
+                 <input type="submit" class="btn" value="Register">
+                <div class="login-link">
+                    <a href="index.jsp">Already have an account? Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const inputs = document.querySelectorAll(".input");
+
+        function addcl() {                    
 
 </body>
 </html>
