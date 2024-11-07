@@ -111,6 +111,25 @@
                     <label for="phone">Phone Number:</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
+                <div class="form-group">
+                    <label for="course">Select Course:</label>
+                    <select class="form-control" id="course" name="course" required>
+                        <option value="">--Select Course--</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Business Administration">Business Administration</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Psychology">Psychology</option>
+                        <option value="Nursing">Nursing</option>
+                        <option value="Education">Education</option>
+                        <option value="Economics">Economics</option>
+                        <option value="Art and Design">Art and Design</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Physics">Physics</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit Enrollment</button>
+            </form>
+        </div>
       </div>        
 
 </body>
