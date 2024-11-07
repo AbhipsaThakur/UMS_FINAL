@@ -5,6 +5,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Feedback Success</title>
+<style>
+      body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #00796b;
+        }
+        p {
+            font-size: 1.2em;
+            color: #004d40;
+        }
+</style>
 </head>
 <body>
      <div class="container">
