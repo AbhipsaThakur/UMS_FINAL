@@ -67,5 +67,18 @@
                         <a href="enrollement.jsp?course=Economics&description=Study%20the%20principles%20of%20economics%20and%20their%20application%20in%20real%20life." class="btn btn-enroll">Enroll Now</a>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Art and Design</h5>
+                        <p>Explore creativity through various art mediums and design principles.</p>
+                        <a href="enrollement.jsp?course=Art%20and%20Design&description=Explore%20creativity%20through%20various%20art%20mediums%20and%20design%20principles." class="btn btn-enroll">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Biology</h5>
+                        <p>Learn about living organisms and their interactions with the environment.</p>
+                        <a href="enrollement.jsp?course=Biology&description=Learn%20about%20living%20organisms%20and%20their%20interactions%20with%20the%20environment." class="btn btn-enroll">Enroll Now</a>
+                    </div>
 </body>
 </html>
