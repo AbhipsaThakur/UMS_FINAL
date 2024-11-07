@@ -97,6 +97,20 @@
                     </tr>
                 </tbody>
               </table>
+              <h4>Enrollment Form</h4>
+            <form action="submitEnrollment.jsp" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
       </div>        
 
 </body>
