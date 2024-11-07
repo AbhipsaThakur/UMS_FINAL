@@ -53,7 +53,16 @@
             transition: background-color 0.3s;
             border: none; /* Remove border */
         }
-        
+        .btn-enroll:hover {
+            background-color: #f0d500; /* Darker yellow on hover */
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
 </style>
 </head>
 <body>
