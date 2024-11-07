@@ -1,12 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>enrollement</title>
-<style>
-       body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
             margin: 0;
@@ -25,6 +27,7 @@
         .table {
             margin-top: 20px;
         }
+
         .btn-submit {
             background-color: #007bff;
             color: white;
@@ -33,15 +36,18 @@
         .btn-submit:hover {
             background-color: #0056b3;
         }
-</style>
+    </style>
 </head>
+
 <body>
-     div class="container">
+
+    <div class="container">
         <div class="header">
             <h1>Enrollment Details</h1>
             <p>Complete your enrollment by providing the necessary information.</p>
         </div>
-    <div class="card p-4">
+
+        <div class="card p-4">
             <h4>Course Information</h4>
             <table class="table table-bordered">
                 <thead>
@@ -125,8 +131,9 @@
                         <td>$2400</td>
                     </tr>
                 </tbody>
-              </table>
-              <h4>Enrollment Form</h4>
+            </table>
+
+            <h4>Enrollment Form</h4>
             <form action="submitEnrollment.jsp" method="post">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
@@ -159,7 +166,8 @@
                 <button type="submit" class="btn btn-submit">Submit Enrollment</button>
             </form>
         </div>
-      </div>        
+    </div>
 
 </body>
+
 </html>
