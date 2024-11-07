@@ -38,5 +38,19 @@
                         <p>Explore various branches of engineering, from mechanical to civil.</p>
                         <a href="enrollement.jsp?course=Engineering&description=Explore%20various%20branches%20of%20engineering,%20from%20mechanical%20to%20civil." class="btn btn-enroll">Enroll Now</a>
                     </div>
+                     </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Psychology</h5>
+                        <p>Understand human behavior and mental processes.</p>
+                        <a href="enrollement.jsp?course=Psychology&description=Understand%20human%20behavior%20and%20mental%20processes." class="btn btn-enroll">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Nursing</h5>
+                        <p>Learn the skills necessary for patient care and healthcare management.</p>
+                        <a href="enrollement.jsp?course=Nursing&description=Learn%20the%20skills%20necessary%20for%20patient%20care%20and%20healthcare%20management." class="btn btn-enroll">Enroll Now</a>
+                    </div>
 </body>
 </html>
