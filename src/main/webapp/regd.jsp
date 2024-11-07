@@ -61,6 +61,15 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
             border-radius: 10px;
+             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .registration-content img {
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .registration-content h2 {
   </style>
 </head>
 <body>
