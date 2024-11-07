@@ -49,6 +49,18 @@
             justify-content: flex-start;
             align-items: center;
             text-align: center;
+               }
+
+        .img img {
+            width: 500px;
+            animation: bounce 2s infinite;
+        }
+
+        form {
+            width: 360px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
   </style>
 </head>
 <body>
