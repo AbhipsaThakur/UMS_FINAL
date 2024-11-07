@@ -70,6 +70,14 @@
         }
 
         .registration-content h2 {
+         margin: 15px 0;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 2.9rem;
+            letter-spacing: 1.5px;
+        }
+
+        .input-div {
   </style>
 </head>
 <body>
