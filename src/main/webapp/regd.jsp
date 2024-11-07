@@ -64,17 +64,14 @@
                         <input type="password" class="input" name="confirmPassword" required>
                     </div>
                 </div>
-                 <input type="submit" class="btn" value="Register">
-                <div class="login-link">
-                    <a href="index.jsp">Already have an account? Login here</a>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script>
+                  <script>
         const inputs = document.querySelectorAll(".input");
 
-        function addcl() {                    
+        function addcl() {
+            let parent = this.parentNode.parentNode;
+            parent.classList.add("focus");
+        }
+                                    
 
 </body>
 </html>
