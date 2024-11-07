@@ -110,6 +110,18 @@
             top: 50%;
             transform: translateY(-50%);
             color: rgba(255, 255, 255, 0.7);
+             font-size: 18px;
+            transition: .3s;
+        }
+
+        .input-div:before, .input-div:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            width: 0%;
+            height: 2px;
+            background-color: #00c6ff;
+            transition: .4s;
   </style>
 </head>
 <body>
