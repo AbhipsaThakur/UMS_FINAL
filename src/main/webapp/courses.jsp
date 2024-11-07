@@ -80,5 +80,30 @@
                         <p>Learn about living organisms and their interactions with the environment.</p>
                         <a href="enrollement.jsp?course=Biology&description=Learn%20about%20living%20organisms%20and%20their%20interactions%20with%20the%20environment." class="btn btn-enroll">Enroll Now</a>
                     </div>
+                     </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Mathematics</h5>
+                        <p>Master the concepts of mathematics, from algebra to calculus.</p>
+                        <a href="enrollement.jsp?course=Mathematics&description=Master%20the%20concepts%20of%20mathematics,%20from%20algebra%20to%20calculus." class="btn btn-enroll">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Physics</h5>
+                        <p>Explore the principles of physics and their application in the real world.</p>
+                        <a href="enrollement.jsp?course=Physics&description=Explore%20the%20principles%20of%20physics%20and%20their%20application%20in%20the%20real%20world." class="btn btn-enroll">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Chemistry</h5>
+                        <p>Study the properties and reactions of different substances.</p>
+                        <a href="enrollement.jsp?course=Chemistry&description=Study%20the%20properties%20and%20reactions%20of%20different%20substances." class="btn btn-enroll">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
