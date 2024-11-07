@@ -5,6 +5,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Feedback Error</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebee;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #d32f2f;
+        }
+        p {
+            font-size: 1.2em;
+            color: #b71c1c;
+        }
+</style>
 </head>
 <body>
      <div class="container">
