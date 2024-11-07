@@ -24,7 +24,78 @@
                         <th>Tuition Fee</th>
                     </tr>
                 </thead>
-                
+                <tbody>
+                    <tr>
+                        <td>Computer Science</td>
+                        <td>4</td>
+                        <td>$4000</td>
+                        <td>$2000</td>
+                        <td>$3000</td>
+                    </tr>
+                    <tr>
+                        <td>Business Administration</td>
+                        <td>3</td>
+                        <td>$3500</td>
+                        <td>$1800</td>
+                        <td>$2500</td>
+                    </tr>
+                    <tr>
+                        <td>Engineering</td>
+                        <td>4</td>
+                        <td>$4500</td>
+                        <td>$2200</td>
+                        <td>$3200</td>
+                    </tr>
+                    <tr>
+                        <td>Psychology</td>
+                        <td>3</td>
+                        <td>$3500</td>
+                        <td>$1800</td>
+                        <td>$2500</td>
+                    </tr>
+                    <tr>
+                        <td>Nursing</td>
+                        <td>4</td>
+                        <td>$4000</td>
+                        <td>$2000</td>
+                        <td>$3000</td>
+                    </tr>
+                    <tr>
+                        <td>Education</td>
+                        <td>3</td>
+                        <td>$3000</td>
+                        <td>$1600</td>
+                        <td>$2400</td>
+                    </tr>
+                    <tr>
+                        <td>Economics</td>
+                        <td>3</td>
+                        <td>$3200</td>
+                        <td>$1600</td>
+                        <td>$2400</td>
+                    </tr>
+                    <tr>
+                        <td>Art and Design</td>
+                        <td>3</td>
+                        <td>$2800</td>
+                        <td>$1500</td>
+                        <td>$2300</td>
+                    </tr>
+                    <tr>
+                        <td>Biology</td>
+                        <td>3</td>
+                        <td>$3000</td>
+                        <td>$1600</td>
+                        <td>$2400</td>
+                    </tr>
+                    <tr>
+                        <td>Physics</td>
+                        <td>3</td>
+                        <td>$3200</td>
+                        <td>$1600</td>
+                        <td>$2400</td>
+                    </tr>
+                </tbody>
               </table>
       </div>        
 
