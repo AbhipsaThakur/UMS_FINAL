@@ -5,6 +5,27 @@
 <head>
 <meta charset="UTF-8">
 <title>enrollement</title>
+<style>
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .table {
+            margin-top: 20px;
+        }
+</style>
 </head>
 <body>
      div class="container">
