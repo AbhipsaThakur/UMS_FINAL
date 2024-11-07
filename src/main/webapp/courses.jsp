@@ -53,6 +53,7 @@
             transition: background-color 0.3s;
             border: none; /* Remove border */
         }
+        
 </style>
 </head>
 <body>
