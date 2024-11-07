@@ -76,7 +76,17 @@
             if (this.value == "") {
                 parent.classList.remove("focus");
             }
-        }                    
+        } inputs.forEach(input => {
+            input.addEventListener("focus", addcl);
+            input.addEventListener("blur", remcl);
+        });
+    </script>
+    <%
+    String error = (String) request.getAttribute("error");
+    if (error != null) {
+        out.println("<p style='color:red;'>" + error + "</p>");
+    }
+    %>                    
 
 </body>
 </html>
