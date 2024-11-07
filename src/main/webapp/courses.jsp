@@ -29,6 +29,30 @@
             font-size: 1.2rem;
             margin-bottom: 30px;
         }
+        .course-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-title {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        .btn-enroll {
+            background-color: yellow;
+            color: black;
+            transition: background-color 0.3s;
+            border: none; /* Remove border */
+        }
 </style>
 </head>
 <body>
