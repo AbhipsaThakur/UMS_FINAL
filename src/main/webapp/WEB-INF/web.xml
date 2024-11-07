@@ -19,4 +19,14 @@
     <servlet-name>login</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>feedback_success</display-name>
+    <servlet-name>feedback_success</servlet-name>
+    <servlet-class>feedback_success</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>feedback_success</servlet-name>
+    <url-pattern>/feedback_success</url-pattern>
+  </servlet-mapping>
 </web-app>
