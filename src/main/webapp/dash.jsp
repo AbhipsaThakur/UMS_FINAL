@@ -320,7 +320,7 @@
             <li><a href="#">Performance</a></li>
             <li><a href="#">My Report Card</a></li>
             <li><a href="#">Feedback</a></li>
-            <li><a href="#">Timetable</a></li>
+            <li><a href="student_timetable.jsp">Timetable</a></li>
             <li><a href="#">Assignments</a></li>
             <li><a href="#">Projects</a></li>
         </ul>
