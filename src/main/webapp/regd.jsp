@@ -21,6 +21,15 @@
             <form action="register" method="post">
                 <img src="img/avatar.svg">
                 <h2 class="title">Register</h2>
+                <!-- Error message display -->
+                <div class="error-message" style="color: red;">
+                    <% if (request.getAttribute("error") != null) { %>
+                        <%= request.getAttribute("error") %>
+                    <% } %>
+                </div>
+
+                <div class="input-div one">
+                    <div class="i">
 
 </body>
 </html>
