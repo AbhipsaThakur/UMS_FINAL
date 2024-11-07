@@ -25,6 +25,14 @@
         .table {
             margin-top: 20px;
         }
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
 </style>
 </head>
 <body>
