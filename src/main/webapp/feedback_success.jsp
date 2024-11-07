@@ -19,6 +19,25 @@
             font-size: 1.2em;
             color: #004d40;
         }
+         .container {
+            border: 1px solid #00796b;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #00796b;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #004d40;
+        }
 </style>
 </head>
 <body>
