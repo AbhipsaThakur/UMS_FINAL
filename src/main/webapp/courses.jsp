@@ -52,5 +52,20 @@
                         <p>Learn the skills necessary for patient care and healthcare management.</p>
                         <a href="enrollement.jsp?course=Nursing&description=Learn%20the%20skills%20necessary%20for%20patient%20care%20and%20healthcare%20management." class="btn btn-enroll">Enroll Now</a>
                     </div>
+                     </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Education</h5>
+                        <p>Prepare for a rewarding career in teaching and educational leadership.</p>
+                        <a href="enrollement.jsp?course=Education&description=Prepare%20for%20a%20rewarding%20career%20in%20teaching%20and%20educational%20leadership." class="btn btn-enroll">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Economics</h5>
+                        <p>Study the principles of economics and their application in real life.</p>
+                        <a href="enrollement.jsp?course=Economics&description=Study%20the%20principles%20of%20economics%20and%20their%20application%20in%20real%20life." class="btn btn-enroll">Enroll Now</a>
+                    </div>
+                </div>
 </body>
 </html>
