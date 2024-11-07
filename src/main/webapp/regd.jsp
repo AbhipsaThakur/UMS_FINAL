@@ -89,7 +89,16 @@
         .input-div.one {
             margin-top: 0;
         }
-        
+         .i {
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .i i {
+            transition: .3s;
+        }
   </style>
 </head>
 <body>
