@@ -211,8 +211,8 @@
 
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#">Assignments</a></li>
-            <li><a href="#">Time Table</a></li>
+            <li><a href="">Assignments</a></li>
+            <li><a href="teacher_timetable.jsp">Time Table</a></li>
             <li><a href="#">Performance</a></li>
             <li><a href="#">Attendance</a></li>
             <li><a href="#">Mentor Mentee</a></li>
