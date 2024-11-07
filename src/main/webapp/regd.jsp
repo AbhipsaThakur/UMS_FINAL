@@ -70,5 +70,14 @@
                     <a href="index.jsp">Already have an account? Login here</a>
                 </div>
             </form>
+             </div>
+    </div>
+    <script>
+        const inputs = document.querySelectorAll(".input");
+
+        function addcl() {
+            let parent = this.parentNode.parentNode;
+            parent.classList.add("focus");
+        }
 </body>
 </html>
