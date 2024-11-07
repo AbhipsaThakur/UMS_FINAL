@@ -99,6 +99,17 @@
         .i i {
             transition: .3s;
         }
+          .input-div > div {
+            position: relative;
+            height: 45px;
+        }
+
+        .input-div > div > h5 {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.7);
   </style>
 </head>
 <body>
