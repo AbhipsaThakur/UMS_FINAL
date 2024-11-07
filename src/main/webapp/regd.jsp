@@ -38,7 +38,17 @@
             grid-gap: 7rem;
             padding: 0 2rem;
         }
-            
+             .img {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .registration-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
   </style>
 </head>
 <body>
