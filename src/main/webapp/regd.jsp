@@ -13,71 +13,10 @@
  </style>
 </head>
 <body>
-       <img class="wave" src="img/wave.png">
+      <img class="wave" src="img/wave.png">
     <div class="container">
         <div class="img">
             <img src="img/bg.svg">
         </div>
-        <div class="registration-content">
-            <form action="register" method="post">
-                <img src="img/avatar.svg">
-                <h2 class="title">Register</h2>
-                
-                <!-- Error message display -->
-                <div class="error-message" style="color: red;">
-                    <% if (request.getAttribute("error") != null) { %>
-                        <%= request.getAttribute("error") %>
-                    <% } %>
-                </div>
-                    <div class="input-div one">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Username</h5>
-                        <input type="text" class="input" name="username" required>
-                    </div>
-                </div>
-                <div class="input-div pass">
-                    <div class="i">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                     <div class="div">
-                        <h5>Email</h5>
-                        <input type="email" class="input" name="email" required>
-                    </div>
-                </div>
-                <div class="input-div pass">
-                    <div class="i">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <div class="div">
-                    <h5>Password</h5>
-                        <input type="password" class="input" name="password" required>
-                    </div>
-                </div>
-                <div class="input-div pass">
-                    <div class="i">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                     <div class="div">
-                        <h5>Confirm Password</h5>
-                        <input type="password" class="input" name="confirmPassword" required>
-                    </div>
-                </div>
-                <input type="submit" class="btn" value="Register">
-                <div class="login-link">
-                    <a href="index.jsp">Already have an account? Login here</a>
-                </div>
-            </form>
-             </div>
-    </div>
-    <script>
-        const inputs = document.querySelectorAll(".input");
-
-        function addcl() {
-            let parent = this.parentNode.parentNode;
-            parent.classList.add("focus");
-        }
 </body>
 </html>
