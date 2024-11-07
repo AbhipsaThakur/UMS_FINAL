@@ -14,6 +14,15 @@
             <p>Join us and elevate your learning experience with diverse courses across various departments.</p>
         </div>
     </section>
-
+ <!-- Courses Section -->
+    <section class="courses my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card course-card text-center p-4">
+                        <h5 class="course-title">Computer Science</h5>
+                        <p>Delve into programming, algorithms, and software development.</p>
+                        <a href="enrollement.jsp?course=Computer%20Science&description=Delve%20into%20programming,%20algorithms,%20and%20software%20development." class="btn btn-enroll">Enroll Now</a>
+                    </div>
 </body>
 </html>
