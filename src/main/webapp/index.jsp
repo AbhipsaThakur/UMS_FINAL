@@ -292,6 +292,31 @@
         .social-media a:hover {
             color: #ffcc00;
         }
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 3rem;
+            padding: 50px 10%;
+        }
+        .contact-text h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .contact-form .send {
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #0ef;
+            color: #000;
+            font-weight: bold;
+        }
+        
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -400,6 +425,32 @@
                 </div>
             </div>
         </section>
+        <section class="contact" id="contact">
+            <div class="contact-text">
+                <h2>Contact With<span>Us</span></h2>
+                <h4>Let's Work Together</h4>
+                <p>We are here to assist you with any inquiries you may have.</p>
+                 <div class="contact-list">
+                    <li><i class='bx bxs-send' style='color:#0ef'></i>jagannathuniversityoftechnolog@gmail.com</li>
+                    <li><i class='bx bxs-phone' style='color:#0ef' ></i>+91 637** *****</li>
+                 </div>
+                 <div class="contact-icons">
+                    <a href=""><i class='bx bxl-linkedin-square' style='color:#0ef'></i></a>
+                    <a href=""><i class='bx bxl-facebook-circle' style='color:#0ef' ></i></a>
+                    <a href=""><i class='bx bxl-twitter' style='color:#0ef'></i></a>
+                    <a href=""><i class='bx bxl-instagram' style='color:#0ef' ></i></a>
+                 </div>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <input type="text" placeholder="Enter Your Home" required>
+                    <input type="email" placeholder="Enter Your Email" required>
+                    <input type="text" placeholder="Enter Your Subject" required>
+                    <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                    <input type="submit" value="submit" class="send">
+                </form>
+            </div>
+        </section>  
     </main>
 
     <footer>
