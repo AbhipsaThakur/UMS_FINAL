@@ -39,4 +39,14 @@
     <servlet-name>ResetPasswordServlet</servlet-name>
     <url-pattern>/ResetPasswordServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SendResetMailServlet</display-name>
+    <servlet-name>SendResetMailServlet</servlet-name>
+    <servlet-class>SendResetMailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendResetMailServlet</servlet-name>
+    <url-pattern>/SendResetMailServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
