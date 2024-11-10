@@ -59,4 +59,24 @@
     <servlet-name>FeedbackServlet</servlet-name>
     <url-pattern>/FeedbackServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Assignment</display-name>
+    <servlet-name>Assignment</servlet-name>
+    <servlet-class>in.sp.assign.Assignment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Assignment</servlet-name>
+    <url-pattern>/Assignment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AssignmentServlet</display-name>
+    <servlet-name>AssignmentServlet</servlet-name>
+    <servlet-class>AssignmentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AssignmentServlet</servlet-name>
+    <url-pattern>/AssignmentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
