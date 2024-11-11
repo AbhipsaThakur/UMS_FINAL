@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -12,10 +13,11 @@ import jakarta.servlet.http.HttpServletResponse;
 public class ResetPasswordServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String token = request.getParameter("token");
         String newPassword = request.getParameter("password");
-        
+
         String dbUrl = "jdbc:mysql://localhost:3306/universitymanagementsystem1";
         String dbUser = "root";
         String dbPass = "Abhipsa299@";

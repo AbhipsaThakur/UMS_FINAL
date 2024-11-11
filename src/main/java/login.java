@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -41,10 +42,10 @@ public class login extends HttpServlet {
                 String username = rs.getString("username");
                 HttpSession session = req.getSession();
                 session.setAttribute("username", username);
-                if (email.endsWith("@student.com")) { 
-                    resp.sendRedirect("dash.jsp"); 
-                } else if (email.endsWith("@admin.com")) { 
-                    resp.sendRedirect("facultydashboard.jsp"); 
+                if (email.endsWith("@student.com")) {
+                    resp.sendRedirect("dash.jsp");
+                } else if (email.endsWith("@admin.com")) {
+                    resp.sendRedirect("FacultyDashboard.jsp");
                 } else {
                     req.setAttribute("error", "Invalid user type.");
                     req.getRequestDispatcher("login.jsp").forward(req, resp);

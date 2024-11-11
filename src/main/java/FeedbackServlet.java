@@ -13,7 +13,8 @@ import jakarta.servlet.http.HttpServletResponse;
 public class FeedbackServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Retrieve feedback and ratings from the form
         String rating1 = request.getParameter("rating1");
         String feedback1 = request.getParameter("feedback1");
@@ -41,25 +42,25 @@ public class FeedbackServlet extends HttpServlet {
             preparedStatement = connection.prepareStatement(sql);
 
             // Insert feedback for faculty 1
-            preparedStatement.setInt(1, 1); 
+            preparedStatement.setInt(1, 1);
             preparedStatement.setString(2, rating1);
             preparedStatement.setString(3, feedback1);
             preparedStatement.executeUpdate();
 
             // Insert feedback for faculty 2
-            preparedStatement.setInt(1, 2); 
+            preparedStatement.setInt(1, 2);
             preparedStatement.setString(2, rating2);
             preparedStatement.setString(3, feedback2);
             preparedStatement.executeUpdate();
 
             // Insert feedback for faculty 3
-            preparedStatement.setInt(1, 3); 
+            preparedStatement.setInt(1, 3);
             preparedStatement.setString(2, rating3);
             preparedStatement.setString(3, feedback3);
             preparedStatement.executeUpdate();
 
             // Insert feedback for faculty 4
-            preparedStatement.setInt(1, 4); 
+            preparedStatement.setInt(1, 4);
             preparedStatement.setString(2, rating4);
             preparedStatement.setString(3, feedback4);
             preparedStatement.executeUpdate();
@@ -72,10 +73,14 @@ public class FeedbackServlet extends HttpServlet {
             response.sendRedirect("feedback_error.jsp");
         } finally {
             try {
-                if (preparedStatement != null) preparedStatement.close();
-                if (connection != null) connection.close();
+                if (preparedStatement != null) {
+					preparedStatement.close();
+				}
+                if (connection != null) {
+					connection.close();
+				}
             } catch (Exception e) {
-                e.printStackTrace(); 
+                e.printStackTrace();
             }
         }
     }

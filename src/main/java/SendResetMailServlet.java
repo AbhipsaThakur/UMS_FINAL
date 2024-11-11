@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Properties;
 import java.util.UUID;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -24,7 +25,8 @@ import jakarta.servlet.http.HttpSession;
 public class SendResetMailServlet extends HttpServlet {
     private static final long serialVersionUID = 7010933452795786893L;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    @Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String dbUrl = "jdbc:mysql://localhost:3306/universitymanagementsystem1";
         String dbUser = "root";
@@ -77,7 +79,8 @@ public class SendResetMailServlet extends HttpServlet {
             props.put("mail.smtp.port", "587");
 
             Session mailSession = Session.getInstance(props, new javax.mail.Authenticator() {
-                protected PasswordAuthentication getPasswordAuthentication() {
+                @Override
+				protected PasswordAuthentication getPasswordAuthentication() {
                     return new PasswordAuthentication(senderEmail, senderPassword);
                 }
             });
