@@ -27,7 +27,7 @@ public class FeedbackServlet extends HttpServlet {
         // Database connection details
         String jdbcURL = "jdbc:mysql://localhost:3306/universitymanagementsystem1";
         String jdbcUsername = "root";
-        String jdbcPassword = "Abhipsa299@";
+        String jdbcPassword = "@rashmi2004";
 
         Connection connection = null;
         PreparedStatement preparedStatement = null;
