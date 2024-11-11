@@ -20,83 +20,135 @@
     <meta charset="UTF-8">
     <title>Student Report</title>
     <style>
-        /* Import Google Fonts */
-        @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,300,700');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
         /* Basic styling */
         body {
-            background: linear-gradient(to right, #25c481, #25b7c4);
-            font-family: 'Roboto', sans-serif;
-            color: black;
+            background: linear-gradient(45deg, #004d7a, #00b4db);
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
         h6 {
             font-size: 14px;
-            margin: 10px 0;
+            color: #555;
         }
 
-        /* Header image styling */
-        img {
-            vertical-align: middle;
+        /* Header styling */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #003f5c;
         }
-        .logo-left {
-            float: left;
-            width: 150px;
-            height: 150px;
+        .logo {
+            width: 80px;
+            height: auto;
         }
         .logo-center {
-            display: inline-block;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: auto;
         }
-        .logo-right {
-            float: right;
-            width: 150px;
-            height: 150px;
+        .btn-back {
+            color: #e09;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 14px;
+            padding: 10px 15px;
+            background-color: #003f5c;
+            border-radius: 5px;
+        }
+        .btn-back:hover {
+            color: #01FFFF;
         }
 
-        /* Styling for main content */
+        /* Print button styling */
+        .btn-print {
+            cursor: pointer;
+            padding: 5px 10px;
+            background: #e09;
+            color: white;
+            border: none;
+
+        }
+        .btn-print:hover {
+            background:  #003f5c;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f7f9fb;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Table styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            table-layout: fixed;
+            margin-top: 20px;
         }
         th, td {
-            padding: 15px;
+            padding: 12px;
             text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid #ddd;
         }
         th {
-            font-size: 12px;
+            background: #005f8b;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
             text-transform: uppercase;
-            font-weight: 500;
-            color: #fff;
-            background: #625D5D;
         }
-        tbody tr:nth-child(odd) {
-            background: #D1D0CE;
+        td {
+            background: #f1f4f9;
+            color: #333;
         }
-        .footer {
-            font-weight: bold;
-            text-align: right;
-        }
-        .btn-print {
-            cursor: pointer;
+        tbody tr:nth-child(even) td {
+            background: #e9eef4;
         }
 
-        /* Styling for hr separator */
-        .new1 {
-            border: 1px solid #000;
+        /* Footer notes */
+        .footer-note {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 20px;
+            color: white;
+        }
+        .footer-hr {
+            border-top: 1px solid #ddd;
+            margin: 15px 0;
+            color: white;
+        }
+
+        /* Logo section */
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo-left, .logo-right {
+            width: 80px;
+            height: auto;
+        }
+        .logo-center {
+            width: 120px;
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <!-- Logo Images -->
-    <img src="logo.png" class="logo-left">
-    <center><img src="img/Screenshot_2024-08-27_000348-removebg-preview.png" class="logo-center"></center>
-    <img src="apj sir.png" class="logo-right">
-
-    <a href="dgiOneView.html">Back</a>
-    <hr class="new1">
+     <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="img/Screenshot_2024-08-27_000348-removebg-preview.png" class="logo-center" style="margin-right:20px;">
+    </div>
 
     <!-- Header Table -->
     <div class="tbl-header">
@@ -210,16 +262,8 @@
             </tr>
         </tfoot>
     </table>
-    
     <hr class="new1">
-    
-    <!-- Footer Notes -->
-    <center>
-        <h6>Note: Institution doesn't hold responsibility for errors or omissions in this statement.<br>
-        Designed & Developed by BTech Days Team</h6>
-    </center>
-    <hr class="new1">
-    <center><h6>All Rights Reserved © BTech Days 2015-2020</h6></center>
+    <center><h6>All Rights Reserved © Jagannath University Of Technology And Management</h6></center>
     <hr class="new1">
 </body>
 <%
