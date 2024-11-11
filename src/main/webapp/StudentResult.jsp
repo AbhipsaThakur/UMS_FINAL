@@ -1,4 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="result.ConnectionProvider" %>
+<%@page import="java.sql.*" %>
+<%
+   try {
+       String rollNo = request.getParameter("rollNo");
+       Connection con = ConnectionProvider.getCon();
+       PreparedStatement ps = con.prepareStatement(
+           "SELECT * FROM addstudentresult "
+           + "INNER JOIN result ON addstudentresult.rollNo = result.rollNo "
+           + "WHERE addstudentresult.rollNo = ?"
+       );
+       ps.setString(1, rollNo);
+       ResultSet rs = ps.executeQuery();
+
+       if (rs.next()) {
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +22,7 @@
     <style>
         /* Import Google Fonts */
         @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,300,700');
-        
+
         /* Basic styling */
         body {
             background: linear-gradient(to right, #25c481, #25b7c4);
@@ -18,7 +33,7 @@
             font-size: 14px;
             margin: 10px 0;
         }
-        
+
         /* Header image styling */
         img {
             vertical-align: middle;
@@ -38,7 +53,7 @@
             width: 150px;
             height: 150px;
         }
-        
+
         /* Styling for main content */
         table {
             width: 100%;
@@ -67,7 +82,7 @@
         .btn-print {
             cursor: pointer;
         }
-        
+
         /* Styling for hr separator */
         .new1 {
             border: 1px solid #000;
@@ -77,7 +92,7 @@
 <body>
     <!-- Logo Images -->
     <img src="logo.png" class="logo-left">
-    <center><img src="dgi.png" class="logo-center"></center>
+    <center><img src="img/Screenshot_2024-08-27_000348-removebg-preview.png" class="logo-center"></center>
     <img src="apj sir.png" class="logo-right">
 
     <a href="dgiOneView.html">Back</a>
@@ -89,17 +104,17 @@
             <thead>
                 <tr>
                     <th>Institution Name: DGI</th>
-                    <th>Course Name: B.Tech</th>
-                    <th>Branch Name: Computer Science</th>
-                    <th>Roll No: 10025</th>
+                    <th>Course Name:<%= rs.getString(1) %></th>
+                    <th>Branch Name:<%= rs.getString(2) %></th>
+                    <th>Roll No: <%= rs.getString(3) %></th>
                 </tr>
                 <tr>
-                    <th>Name: Gaurav Kumar</th>
-                    <th>Father's Name: Sunil Kumar</th>
-                    <th>Gender: Male</th>
+                    <th>Name: <%= rs.getString(4) %></th>
+                    <th>Father's Name: <%= rs.getString(5) %></th>
+                    <th>Gender: <%= rs.getString(6) %></th>
                     <th>
                         <a title="Print screen" onclick="window.print();" class="btn-print">
-                            <img src="print.png" alt="Print" width="24" height="24">
+                            <img src="img/print.png" alt="Print" width="24" height="24">
                         </a>
                     </th>
                 </tr>
@@ -131,7 +146,7 @@
                 <td>Theory</td>
                 <td>100</td>
                 <td>30</td>
-                <td>80</td>
+                <td><%= rs.getString(8) %></td>
             </tr>
             <tr>
                 <td>NAS102</td>
@@ -139,7 +154,7 @@
                 <td>Theory</td>
                 <td>100</td>
                 <td>30</td>
-                <td>98</td>
+                <td><%= rs.getString(9) %></td>
             </tr>
             <tr>
                 <td>NAS103</td>
@@ -147,7 +162,7 @@
                 <td>Theory</td>
                 <td>100</td>
                 <td>30</td>
-                <td>75</td>
+                <td><%= rs.getString(10) %></td>
             </tr>
             <tr>
                 <td>NEE101</td>
@@ -155,7 +170,7 @@
                 <td>Theory</td>
                 <td>100</td>
                 <td>30</td>
-                <td>85</td>
+                <td><%= rs.getString(11) %></td>
             </tr>
             <tr>
                 <td>NEC101</td>
@@ -163,7 +178,7 @@
                 <td>Theory</td>
                 <td>100</td>
                 <td>30</td>
-                <td>99</td>
+                <td><%= rs.getString(12) %></td>
             </tr>
             <tr>
                 <td>NAS152</td>
@@ -171,7 +186,7 @@
                 <td>Practical</td>
                 <td>30</td>
                 <td>15</td>
-                <td>20</td>
+                <td><%= rs.getString(13) %></td>
             </tr>
             <tr>
                 <td>NAS151</td>
@@ -179,7 +194,7 @@
                 <td>Practical</td>
                 <td>30</td>
                 <td>15</td>
-                <td>21</td>
+                <td><%= rs.getString(14) %></td>
             </tr>
         </tbody>
         <tfoot>
@@ -187,11 +202,11 @@
                 <td colspan="4" class="footer">Total Marks</td>
                 <td>560</td>
                 <td>180</td>
-                <td>450</td>
+                <td><%= rs.getInt(8) + rs.getInt(9) + rs.getInt(10) + rs.getInt(11) + rs.getInt(12) + rs.getInt(13) + rs.getInt(14) %></td>
             </tr>
             <tr>
                 <td colspan="4" class="footer">Percentage</td>
-                <td colspan="3">80%</td>
+                <td colspan="3"><%= ((rs.getInt(8) + rs.getInt(9) + rs.getInt(10) + rs.getInt(11) + rs.getInt(12) + rs.getInt(13) + rs.getInt(14)) * 100) / 560 %></td>
             </tr>
         </tfoot>
     </table>
@@ -204,7 +219,18 @@
         Designed & Developed by BTech Days Team</h6>
     </center>
     <hr class="new1">
-    <center><h6>All Rights Reserved Â© BTech Days 2015-2020</h6></center>
+    <center><h6>All Rights Reserved © BTech Days 2015-2020</h6></center>
     <hr class="new1">
 </body>
+<%
+       } else {
+    	   response.sendRedirect("dgioneview.jsp");
+       }
+       rs.close();
+       ps.close();
+       con.close();
+   } catch (Exception e) {
+       e.printStackTrace();
+   }
+%>
 </html>
