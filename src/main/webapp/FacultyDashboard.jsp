@@ -213,9 +213,9 @@
         <ul>
             <li><a href="">Assignments</a></li>
             <li><a href="teacher_timetable.jsp">Time Table</a></li>
-            <li><a href="#">Performance</a></li>
+            <li><a href="facultyPerformance.jsp">Performance</a></li>
             <li><a href="#">Attendance</a></li>
-            <li><a href="#">Mentor Mentee</a></li>
+            <li><a href="Mentor.jsp">Mentor Mentee</a></li>
             <li><a href="#">Students</a></li>
             <li><a href="#">Employees</a></li>
             <li><a href="#">Examination</a></li>
@@ -230,15 +230,15 @@
         <div class="dashboard-grid">
             <div class="dashboard-item">
                 <i class="fas fa-tasks"></i>
-                <p>Assignments</p>
+                <p><a href="">Assignments</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-clock"></i>
-                <p>Time Table</p>
+                <p><a href="teacher_timetable.jsp">Time Table</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-chart-line"></i>
-                <p>Performance</p>
+                <p><a href="facultyPerformance.jsp">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </a>Performance</p></a>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-calendar-check"></i>
@@ -246,7 +246,7 @@
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-user-friends"></i>
-                <p>Mentor Mentee</p>
+                <p><a href="Mentor.jsp">Mentor Mentee</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-user-graduate"></i>
