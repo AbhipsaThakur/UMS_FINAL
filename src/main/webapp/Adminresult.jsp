@@ -159,7 +159,7 @@
     </style>
 </head>
 <body>
-    <img src="Screenshot_2024-08-27_000348-removebg-preview.png" align="left" width="100" height="100">
+    <img src="img/Screenshot_2024-08-27_000348-removebg-preview.png" align="left" width="100" height="100">
     <center>
         <img src="dgi.png" width="100" height="100">
         <img src="apj sir.png" align="right" width="100" height="100">
@@ -446,25 +446,24 @@ Designed & Developed by BTech Days Team</h5></center>
   <hr class="new1">
 <br>
    <script>
-function openCity(event, cityName) {
-    const tabcontent = document.getElementsByClassName("city");
-    for (let i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    function openCity(evt, cityName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " w3-red";
     }
-    document.getElementById(cityName).style.display = "block";
-    const tablinks = document.getElementsByClassName("tablink");
-    for (let i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-    }
-    event.currentTarget.className += " w3-red";
-}
-
-// Set default open tab
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementsByClassName("tablink")[0].click();
-});
+    // Show the first tab by default
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementsByClassName("tablink")[0].click();
+    });
 </script>
-   
-    
+
 </body>
 </html>
