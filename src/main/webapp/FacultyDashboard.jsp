@@ -1,251 +1,288 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentor-Mentee Schedule</title>
-    <style type="text/css">
-        /* General body styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e9edf0;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    /* Reset and base styling */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        flex-direction: column;
+    }
 
-        /* Container styling */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
+    /* Navbar styling */
+    .navbar {
+        background: linear-gradient(90deg, #6ca0dc, #f3e5ab);
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .navbar .menu-icon {
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .navbar .user-info {
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+    .navbar .user-icon {
+        font-size: 24px;
+        color: white;
+    }
+    .navbar .username {
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 0;
+        background-color: white;
+        color: #333;
+        padding: 8px 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        font-size: 16px;
+        white-space: nowrap;
+        transition: opacity 0.3s ease;
+    }
+    .navbar .user-info:hover .username {
+        display: block;
+        opacity: 1;
+    }
 
-        h2 {
-            text-align: center;
-            color: #4a4a4a;
-            font-size: 2em;
-            margin-bottom: 25px;
-        }
+    /* Sidebar styling */
+    .sidebar {
+        background: linear-gradient(180deg, #e0e7fa, #d1fae5);
+        color: #333;
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -250px;
+        transition: all 0.3s ease;
+        z-index: 999;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    }
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 80px 0 0;
+    }
+    .sidebar ul li {
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+        transition: background-color 0.3s;
+    }
+    .sidebar ul li:hover {
+        background-color: #d1fae5;
+    }
+    .sidebar ul li a {
+        color: #333;
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s;
+    }
+    .sidebar ul li a:hover {
+        color: #6ca0dc;
+    }
+    .sidebar.show {
+        left: 0;
+    }
 
-        /* Flexbox grid layout for mentor blocks */
-        .schedule-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
+    /* Main container */
+    .container {
+        flex: 1;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        transition: margin-left 0.3s ease;
+    }
+    .sidebar.show + .container {
+        margin-left: 250px;
+    }
 
-        /* Mentor block styling */
-        .mentor-block {
-            flex: 1 1 280px;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
+    /* Welcome message */
+    .welcome-message {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #4a90e2;
+    }
 
-        .mentor-block:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
+    /* Dashboard grid */
+    .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+        width: 80%;
+    }
 
-        /* Mentor block header with colored left border */
-        .mentor-block h3 {
-            margin: 0 0 10px 0;
-            color: #4a76a8;
-            font-size: 1.25em;
-            border-left: 5px solid #4a76a8;
-            padding-left: 10px;
-        }
+    /* Dashboard item styling */
+    .dashboard-item {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 30px 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    .dashboard-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+    .dashboard-item i {
+        font-size: 48px;
+        margin-bottom: 10px;
+        color: #6ca0dc;
+        transition: color 0.3s;
+    }
+    .dashboard-item p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
 
-        .mentor-block p {
-            margin: 5px 0;
-            color: #555;
-            font-size: 0.95em;
-        }
+    /* Footer styling */
+    footer {
+        background-color: #6ca0dc;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        width: 100%;
+        font-size: 15px;
+    }
 
-        .mentor-block h4 {
-            margin-top: 15px;
-            font-size: 1.1em;
-            color: #333;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .navbar .username {
+            font-size: 14px;
         }
-
-        /* Student list styling */
-        .student-list {
-            list-style-type: none;
-            padding: 0;
-            max-height: 150px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            padding: 10px;
-            background-color: #fdfdfd;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        .dashboard-grid {
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         }
-
-        .student-list li {
-            padding: 6px;
-            background-color: #f3f7fb;
-            margin: 3px 0;
-            border-radius: 4px;
-            color: #333;
-            font-size: 0.9em;
+        .sidebar {
+            width: 220px;
         }
-
-        .student-list li:nth-child(even) {
-            background-color: #e8f0fa;
-        }
-
-        .mentor-block:nth-child(odd) {
-            background-color: #e0f7fa;
-        }
-
-        .mentor-block:nth-child(even) {
-            background-color: #fff3e0;
-        }
-
-        /* Add hover effect to student list */
-        .student-list:hover {
-            background-color: #fafafa;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h2>Upcoming Mentor-Mentee Interaction Schedule</h2>
-        <div class="schedule-grid">
-            <!-- Mentor Blocks with Schedule -->
-            <div class="mentor-block">
-                <h3>Mentor: Dr. Alice Johnson</h3>
-                <p><strong>Next Session:</strong> December 5, 2024</p>
-                <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
-                <p><strong>Location:</strong> Room 101</p>
-                <h4>Students</h4>
-                <ul class="student-list">
-                    <li>Student A</li>
-                    <li>Student B</li>
-                    <li>Student C</li>
-                    <li>Student D</li>
-                    <li>Student E</li>
-                    <li>Student F</li>
-                    <li>Student G</li>
-                    <li>Student H</li>
-                    <li>Student I</li>
-                    <li>Student J</li>
-                </ul>
-            </div>
-
-            <div class="mentor-block">
-                <h3>Mentor: Prof. Brian Smith</h3>
-                <p><strong>Next Session:</strong> December 10, 2024</p>
-                <p><strong>Time:</strong> 2:00 PM - 4:00 PM</p>
-                <p><strong>Location:</strong> Room 102</p>
-                <h4>Students</h4>
-                <ul class="student-list">
-                    <li>Student K</li>
-                    <li>Student L</li>
-                    <li>Student M</li>
-                    <li>Student N</li>
-                    <li>Student O</li>
-                    <li>Student P</li>
-                    <li>Student Q</li>
-                    <li>Student R</li>
-                    <li>Student S</li>
-                    <li>Student T</li>
-                </ul>
-            </div>
-
-            <div class="mentor-block">
-                <h3>Mentor: Dr. Sarah Lee</h3>
-                <p><strong>Next Session:</strong> December 15, 2024</p>
-                <p><strong>Time:</strong> 9:00 AM - 11:00 AM</p>
-                <p><strong>Location:</strong> Room 103</p>
-                <h4>Students</h4>
-                <ul class="student-list">
-                    <li>Student U</li>
-                    <li>Student V</li>
-                    <li>Student W</li>
-                    <li>Student X</li>
-                    <li>Student Y</li>
-                    <li>Student Z</li>
-                    <li>Student AA</li>
-                    <li>Student AB</li>
-                    <li>Student AC</li>
-                    <li>Student AD</li>
-                </ul>
-            </div>
-
-            <div class="mentor-block">
-                <h3>Mentor: Dr. Emma Wilson</h3>
-                <p><strong>Next Session:</strong> December 20, 2024</p>
-                <p><strong>Time:</strong> 11:00 AM - 1:00 PM</p>
-                <p><strong>Location:</strong> Room 104</p>
-                <h4>Students</h4>
-                <ul class="student-list">
-                    <li>Student AE</li>
-                    <li>Student AF</li>
-                    <li>Student AG</li>
-                    <li>Student AH</li>
-                    <li>Student AI</li>
-                    <li>Student AJ</li>
-                    <li>Student AK</li>
-                    <li>Student AL</li>
-                    <li>Student AM</li>
-                    <li>Student AN</li>
-                </ul>
-            </div>
-
-            <div class="mentor-block">
-                <h3>Mentor: Prof. Michael Brown</h3>
-                <p><strong>Next Session:</strong> December 25, 2024</p>
-                <p><strong>Time:</strong> 3:00 PM - 5:00 PM</p>
-                <p><strong>Location:</strong> Room 105</p>
-                <h4>Students</h4>
-                <ul class="student-list">
-                    <li>Student AO</li>
-                    <li>Student AP</li>
-                    <li>Student AQ</li>
-                    <li>Student AR</li>
-                    <li>Student AS</li>
-                    <li>Student AT</li>
-                    <li>Student AU</li>
-                    <li>Student AV</li>
-                    <li>Student AW</li>
-                    <li>Student AX</li>
-                </ul>
-            </div>
-
-            <div class="mentor-block">
-                <h3>Mentor: Dr. John Doe</h3>
-                <p><strong>Next Session:</strong> January 1, 2025</p>
-                <p><strong>Time:</strong> 8:00 AM - 10:00 AM</p>
-                <p><strong>Location:</strong> Room 106</p>
-                <h4>Students</h4>
-                <ul class="student-list">
-                    <li>Student AY</li>
-                    <li>Student AZ</li>
-                    <li>Student BA</li>
-                    <li>Student BB</li>
-                    <li>Student BC</li>
-                    <li>Student BD</li>
-                    <li>Student BE</li>
-                    <li>Student BF</li>
-                    <li>Student BG</li>
-                    <li>Student BH</li>
-                </ul>
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="user-info">
+            <i class="fas fa-user user-icon"></i>
+            <div class="username">
+                <%
+                    HttpSession sp = request.getSession(false);
+                    if (sp != null) {
+                        String username = (String) sp.getAttribute("username");
+                        if (username != null) {
+                            out.print(username);
+                        } else {
+                            out.print("Guest");
+                        }
+                    }
+                %>
             </div>
         </div>
     </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="">Assignments</a></li>
+            <li><a href="teacher_timetable.jsp">Time Table</a></li>
+            <li><a href="facultyPerformance.jsp">Performance</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="Mentor.jsp">Mentor Mentee</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Employees</a></li>
+            <li><a href="#">Examination</a></li>
+            <li><a href="#">Question Bank</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <p class="welcome-message">Welcome to the Faculty Dashboard</p>
+        <div class="dashboard-grid">
+            <div class="dashboard-item">
+                <i class="fas fa-tasks"></i>
+                <p><a href="">Assignments</a></p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-clock"></i>
+                <p><a href="teacher_timetable.jsp">Time Table</a></p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-chart-line"></i>
+                <p><a href="facultyPerformance.jsp">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </a>Performance</p></a>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-calendar-check"></i>
+                <p>Attendance</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-user-friends"></i>
+                <p><a href="Mentor.jsp">Mentor Mentee</a></p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-user-graduate"></i>
+                <p>Students</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-users"></i>
+                <p>Employees</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-file-alt"></i>
+                <p>Examination</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-book"></i>
+                <p>Question Bank</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-chart-bar"></i>
+                <p>Reports</p>
+            </div>
+            <div class="dashboard-item">
+                <i class="fas fa-comments"></i>
+                <p>Feedback</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Your Institution Name. All Rights Reserved.
+    </footer>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
