@@ -350,7 +350,7 @@
                 <ul>
                     <li><a href="index.jsp">Home</a></li>
                     <li><a href="AboutUs.jsp">About</a></li>
-                    <li><a href="courses.jsp">Courses</a></li>
+                    <li><a href="Courses.jsp">Courses</a></li>
                     <li><a href="login.jsp">Login</a></li>
                     <li><a href="contactus.jsp">Contact</a></li>
                 </ul>
