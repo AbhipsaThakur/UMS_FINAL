@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Management System - Employees</title>
+    <title>University Management System - Employee Directory</title>
     <style>
-        /* Basic Styling */
+        /* Basic Page Styling */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f7f6;
@@ -18,22 +16,22 @@
         }
         h2 {
             text-align: center;
-            color: #1e90ff;
+            color: #1e90ff; /* Changed to a blue color */
         }
-        
-        /* Container */
+
+        /* Container Styling */
         .container {
             width: 80%;
-            max-width: 900px;
+            max-width: 800px;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Department Buttons */
-        .department {
-            background-color: #1e90ff;
+        /* Department and Role Styling */
+        .department, .role {
+            background-color: #1e90ff; /* Primary blue color */
             color: #fff;
             padding: 10px 15px;
             margin: 5px 0;
@@ -42,37 +40,39 @@
             transition: background-color 0.3s;
             font-weight: bold;
         }
-        .department:hover {
-            background-color: #5a9fd7;
+        .department:hover, .role:hover {
+            background-color: #5a9fd7; /* Lighter blue for hover */
         }
 
-        /* Employee and Department List */
+        /* Employee List Styling */
         #employeeList {
             margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
         }
-        
+
         ul {
             list-style-type: none;
             padding: 0;
         }
-        
+
         li {
-            background-color: #f0f8ff;
+            background-color: #f0f8ff; /* Light blue background for list items */
             margin: 5px 0;
             padding: 8px;
             border-radius: 5px;
             color: #333;
             font-weight: 500;
         }
-        
+
         li:hover {
-            background-color: #e6f2ff;
+            background-color: #e6f2ff; /* Even lighter blue on hover */
         }
-        
+
         /* Titles */
         h3 {
             margin-bottom: 10px;
-            color: #1e90ff;
+            color: #1e90ff; /* Consistent blue for titles */
         }
 
         /* Responsive Design */
@@ -86,94 +86,77 @@
 <body>
 
 <div class="container">
-    <h2>University Management System - Employees</h2>
+    <h2>University Management System - Employee Directory</h2>
 
     <!-- Departments List -->
     <div id="departments">
         <h3>Select Department</h3>
-        <div class="department" onclick="showEmployees('Administration')">Administration</div>
-        <div class="department" onclick="showEmployees('Teaching')">Teaching</div>
-        <div class="department" onclick="showEmployees('SupportStaff')">Support Staff</div>
+        <div class="department" onclick="showRoles('Administration')">Administration</div>
+        <div class="department" onclick="showRoles('Teaching')">Teaching</div>
+        <div class="department" onclick="showRoles('Support')">Support</div>
+    </div>
+
+    <!-- Roles List -->
+    <div id="roles" style="display: none;">
+        <h3 id="departmentTitle">Roles</h3>
+        <div class="role" onclick="showEmployees('Manager')">Manager</div>
+        <div class="role" onclick="showEmployees('Assistant')">Assistant</div>
+        <div class="role" onclick="showEmployees('Technician')">Technician</div>
+        <div class="role" onclick="showEmployees('Professor')">Professor</div>
+        <div class="role" onclick="showEmployees('Librarian')">Librarian</div>
     </div>
 
     <!-- Employee List -->
     <div id="employeeList" style="display: none;">
-        <h3 id="departmentTitle">Employees in Department</h3>
-        <ul id="employees">
-            <!-- Employees will be populated here -->
-        </ul>
+        <div>
+            <h3>Employees</h3>
+            <ul id="employees">
+                <!-- Employees will be populated here -->
+            </ul>
+        </div>
     </div>
 </div>
 
 <script>
-// Wait until the DOM is fully loaded before running the script
-document.addEventListener("DOMContentLoaded", function() {
-    const employees = {
-        "Administration": [
-            { name: "Rajesh Patel", role: "Registrar" },
-            { name: "Aditi Sharma", role: "Assistant Registrar" },
-            { name: "Nitin Mehta", role: "Accountant" },
-            { name: "Sneha Joshi", role: "HR Manager" },
-            { name: "Ramesh Kumar", role: "Finance Manager" },
-            { name: "Sanjay Bhatia", role: "Legal Advisor" },
-            { name: "Kavita Rao", role: "Compliance Officer" },
-            { name: "Sunil Bhardwaj", role: "Administrative Coordinator" },
-            { name: "Jyoti Kapoor", role: "Procurement Officer" },
-            { name: "Manoj Deshmukh", role: "Payroll Officer" },
-            { name: "Vikas Tiwari", role: "Public Relations Manager" },
-            { name: "Anjana Chauhan", role: "Event Coordinator" },
-            { name: "Pankaj Singh", role: "Records Manager" },
-            { name: "Reena Saxena", role: "Assistant Compliance Officer" },
-            { name: "Alok Agarwal", role: "Facilities Manager" }
-        ],
-        "Teaching": [
-            { name: "Dr. Anjali Verma", role: "Professor, Computer Science" },
-            { name: "Dr. Prakash Rao", role: "Professor, Mathematics" },
-            { name: "Dr. Neha Gupta", role: "Assistant Professor, Physics" },
-            { name: "Mr. Vijay Reddy", role: "Lecturer, English" },
-            { name: "Dr. Meera Sen", role: "Professor, Economics" },
-            { name: "Dr. Ravi Chaturvedi", role: "Associate Professor, Chemistry" },
-            { name: "Ms. Pooja Narayan", role: "Lecturer, History" },
-            { name: "Dr. Akash Nanda", role: "Professor, Biology" },
-            { name: "Ms. Swati Kapoor", role: "Assistant Professor, Statistics" }
-        ],
-        "SupportStaff": [
-            { name: "Kiran Nair", role: "Librarian" },
-            { name: "Praveen Kumar", role: "Lab Assistant" },
-            { name: "Rekha Singh", role: "Office Assistant" },
-            { name: "Ravi Chawla", role: "Maintenance Head" },
-            { name: "Sunita Desai", role: "Receptionist" },
-            { name: "Anil Agarwal", role: "Technical Support" },
-            { name: "Manju Rawat", role: "Groundskeeper" },
-            { name: "Mahesh Sharma", role: "Cafeteria Staff" }
-        ]
-    };
+// JavaScript to simulate data and interactions
 
-    function showEmployees(department) {
-        console.log(`Showing employees for ${department}`);
-        
-        const departmentTitle = document.getElementById('departmentTitle');
-        departmentTitle.innerText = `Employees in ${department}`;
-        
-        const employeeUl = document.getElementById('employees');
-        employeeUl.innerHTML = ''; // Clear previous list
-
-        if (!employees[department]) {
-            console.error(`Department '${department}' not found`);
-            return;
-        }
-
-        employees[department].forEach(employee => {
-            const li = document.createElement('li');
-            li.innerText = `${employee.name} - ${employee.role}`;
-            employeeUl.appendChild(li);
-        });
-
-        document.getElementById('employeeList').style.display = 'block';
+const employees = {
+    "Administration": {
+        "Manager": ["Rajesh Patel", "Nitin Mehta"],
+        "Assistant": ["Aditi Sharma", "Praveen Kumar"]
+    },
+    "Teaching": {
+        "Professor": ["Dr. Anjali Verma", "Dr. Prakash Rao"],
+        "Assistant": ["Dr. Neha Gupta"]
+    },
+    "Support": {
+        "Technician": ["Kiran Nair", "Harish Nair"],
+        "Librarian": ["Sanya Naik"]
     }
+};
 
-    window.showEmployees = showEmployees; // Expose the function to global scope
-});
+function showRoles(department) {
+    document.getElementById('departmentTitle').innerText = `Roles in ${department}`;
+    document.getElementById('roles').style.display = 'block';
+    document.getElementById('employeeList').style.display = 'none';
+    document.getElementById('roles').setAttribute('data-department', department);
+}
+
+function showEmployees(role) {
+    const department = document.getElementById('roles').getAttribute('data-department');
+    const employeeList = employees[department][role] || [];
+    
+    // Populate Employees
+    const employeeUl = document.getElementById('employees');
+    employeeUl.innerHTML = '';
+    employeeList.forEach(employee => {
+        const li = document.createElement('li');
+        li.innerText = employee;
+        employeeUl.appendChild(li);
+    });
+
+    document.getElementById('employeeList').style.display = 'block';
+}
 </script>
 
 </body>
