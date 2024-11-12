@@ -381,7 +381,7 @@
             </div>
             <div class="feature">
                 <i class="fas fa-user-tie"></i>
-                <h3>Faculty & Staff</h3>
+                <h3><a href="TeacherandStaffInformation.jsp">Faculty & Staff</a></h3>
                 <p>Dedicated faculty and staff to guide and mentor students.</p>
             </div>
         </div>
