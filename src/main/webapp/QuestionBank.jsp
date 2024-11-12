@@ -1,256 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Dashboard - Question Bank</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Basic Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f1f1f1;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question Bank</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #444;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+    .container {
+      width: 80%;
+      margin: 30px auto;
+    }
 
-        h1 {
-            text-align: center;
-            color: #007bff;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        /* Department and Add Question Form */
-        .filter-container {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
+    h1 {
+      color: #4CAF50;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
 
-        .filter-container select, .filter-container button {
-            padding: 10px;
-            font-size: 1em;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+    .form-section, .table-section {
+      background-color: #fff;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Question Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #f9f9f9;
-        }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
 
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
 
-        th {
-            background-color: #007bff;
-            color: white;
-        }
+    input[type="text"], select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
 
-        td {
-            background-color: #f1f1f1;
-        }
+    input[type="text"]:focus, select:focus {
+      border-color: #4CAF50;
+      outline: none;
+    }
 
-        .action-btns a {
-            margin: 0 8px;
-            color: #007bff;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
+    button {
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-        .action-btns a:hover {
-            color: #0056b3;
-        }
+    button:hover {
+      background-color: #45a049;
+    }
 
-        /* Add Question Form */
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
 
-        .form-container input, .form-container textarea {
-            padding: 12px;
-            font-size: 1em;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
 
-        .form-container button {
-            background-color: #28a745;
-            color: white;
-            padding: 12px 25px;
-            font-size: 1em;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    th, td {
+      padding: 15px;
+      text-align: left;
+      font-size: 16px;
+    }
 
-        .form-container button:hover {
-            background-color: #218838;
-        }
+    th {
+      background-color: #f1f1f1;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .filter-container {
-                flex-direction: column;
-            }
-        }
-    </style>
+    td button {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    td button:hover {
+      background-color: #d32f2f;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      button {
+        width: 100%;
+        padding: 15px;
+      }
+
+      input[type="text"], select {
+        width: 100%;
+      }
+
+      table {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Faculty Dashboard - Question Bank</h1>
 
-        <!-- Filter by Department -->
-        <div class="filter-container">
-            <select id="departmentSelect">
-                <option value="all">Select Department</option>
-                <option value="computerScience">Computer Science</option>
-                <option value="electronics">Electronics</option>
-                <option value="mechanical">Mechanical</option>
-                <option value="civil">Civil Engineering</option>
-            </select>
-            <button onclick="filterQuestions()">Filter Questions</button>
-        </div>
+  <div class="container">
+    <header>
+      <h1>Question Bank - University Management System</h1>
+    </header>
 
-        <!-- Add Question Form -->
-        <div class="form-container">
-            <h3>Add New Question</h3>
-            <input type="text" id="questionTitle" placeholder="Enter Question Title" />
-            <textarea id="questionDescription" placeholder="Enter Question Description"></textarea>
-            <input type="text" id="questionAnswer" placeholder="Enter Answer" />
-            <select id="questionDepartment">
-                <option value="computerScience">Computer Science</option>
-                <option value="electronics">Electronics</option>
-                <option value="mechanical">Mechanical</option>
-                <option value="civil">Civil Engineering</option>
-            </select>
-            <button onclick="addQuestion()">Add Question</button>
-        </div>
+    <div class="form-section">
+      <h2>Add New Question</h2>
+      <form id="questionForm">
+        <label for="questionText">Question:</label>
+        <input type="text" id="questionText" placeholder="Enter the question text" required><br>
 
-        <!-- Question Table -->
-        <h3>Questions List</h3>
-        <table id="questionTable">
-            <thead>
-                <tr>
-                    <th>Question</th>
-                    <th>Answer</th>
-                    <th>Department</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dynamic content will be inserted here -->
-            </tbody>
-        </table>
+        <label for="questionCourse">Course:</label>
+        <input type="text" id="questionCourse" placeholder="Enter the course name" required><br>
+
+        <label for="questionLevel">Difficulty Level:</label>
+        <select id="questionLevel" required>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select><br>
+
+        <button type="submit">Add Question</button>
+      </form>
     </div>
 
-    <script>
-        // Sample question data
-        let questions = [
-            { title: "What is Java?", description: "Explain Java programming language.", answer: "Java is a high-level programming language.", department: "computerScience" },
-            { title: "What is Ohm's Law?", description: "State and explain Ohm's Law.", answer: "V = IR", department: "electronics" },
-            { title: "Define Work and Energy.", description: "Explain the relationship between work and energy.", answer: "Work done is energy transferred.", department: "mechanical" }
-        ];
+    <div class="table-section">
+      <h2>Question Bank</h2>
+      <table id="questionsTable">
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Course</th>
+            <th>Difficulty</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Question data will be displayed here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-        // Function to render the questions in the table
-        function renderQuestions() {
-            const tableBody = document.getElementById('questionTable').getElementsByTagName('tbody')[0];
-            tableBody.innerHTML = ''; // Clear the table
-            questions.forEach((question, index) => {
-                const row = tableBody.insertRow();
-                row.innerHTML = `
-                    <td>${question.title}</td>
-                    <td>${question.answer}</td>
-                    <td>${question.department}</td>
-                    <td class="action-btns">
-                        <a href="editQuestion.jsp?id=${index}"><i class="fas fa-edit"></i></a>
-                        <a href="deleteQuestion.jsp?id=${index}" onclick="deleteQuestion(${index})"><i class="fas fa-trash-alt"></i></a>
-                    </td>
-                `;
-            });
-        }
+  <script>
+    // JavaScript to handle form submission and table updates
 
-        // Function to add a new question
-        function addQuestion() {
-            const title = document.getElementById('questionTitle').value;
-            const description = document.getElementById('questionDescription').value;
-            const answer = document.getElementById('questionAnswer').value;
-            const department = document.getElementById('questionDepartment').value;
+    document.getElementById('questionForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from submitting
 
-            if (title && description && answer) {
-                // Add new question to the array
-                questions.push({ title, description, answer, department });
+      const questionText = document.getElementById('questionText').value;
+      const questionCourse = document.getElementById('questionCourse').value;
+      const questionLevel = document.getElementById('questionLevel').value;
 
-                // Clear the form inputs
-                document.getElementById('questionTitle').value = '';
-                document.getElementById('questionDescription').value = '';
-                document.getElementById('questionAnswer').value = '';
-                document.getElementById('questionDepartment').value = 'computerScience';
+      if (questionText && questionCourse && questionLevel) {
+        // Create a new row for the table
+        const table = document.getElementById('questionsTable').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
 
-                // Re-render the questions in the table
-                renderQuestions();
-            } else {
-                alert("Please fill all fields.");
-            }
-        }
+        const questionCell = newRow.insertCell(0);
+        const courseCell = newRow.insertCell(1);
+        const levelCell = newRow.insertCell(2);
+        const actionCell = newRow.insertCell(3);
 
-        // Function to filter questions by department
-        function filterQuestions() {
-            const department = document.getElementById('departmentSelect').value;
-            const filteredQuestions = department === 'all' ? questions : questions.filter(q => q.department === department);
-            renderFilteredQuestions(filteredQuestions);
-        }
+        questionCell.textContent = questionText;
+        courseCell.textContent = questionCourse;
+        levelCell.textContent = questionLevel;
 
-        // Function to render filtered questions
-        function renderFilteredQuestions(filteredQuestions) {
-            const tableBody = document.getElementById('questionTable').getElementsByTagName('tbody')[0];
-            tableBody.innerHTML = ''; // Clear the table
-            filteredQuestions.forEach((question, index) => {
-                const row = tableBody.insertRow();
-                row.innerHTML = `
-                    <td>${question.title}</td>
-                    <td>${question.answer}</td>
-                    <td>${question.department}</td>
-                    <td class="action-btns">
-                        <a href="editQuestion.jsp?id=${index}"><i class="fas fa-edit"></i></a>
-                        <a href="deleteQuestion.jsp?id=${index}" onclick="deleteQuestion(${index})"><i class="fas fa-trash-alt"></i></a>
-                    </td>
-                `;
-            });
-        }
+        // Add a delete button to the last cell
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function () {
+          table.deleteRow(newRow.rowIndex - 1);
+        };
 
-        // Function to delete a question
-        function deleteQuestion(index) {
-            if (confirm("Are you sure you want to delete this question?")) {
-                questions.splice(index, 1); // Remove the question from the array
-                renderQuestions(); // Update the question table
-            }
-        }
+        actionCell.appendChild(deleteButton);
 
-        // Initialize the table with sample questions
-        renderQuestions();
-    </script>
-
+        // Clear the form inputs
+        document.getElementById('questionForm').reset();
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+  </script>
 </body>
 </html>
