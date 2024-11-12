@@ -155,6 +155,7 @@
             padding: 50px 10%;
             text-align: center;
             background-color: #f8f9fa;
+           
         }
 
         .feature-grid {
@@ -185,7 +186,15 @@
         .feature p {
             color: #666;
         }
-
+        .feature a {
+        text-decoration: none; /* Remove underline */
+        color: #007bff; /* Set text color */
+        font-weight: bold; /* Make the text bold */
+    }
+    .feature a:hover {
+        text-decoration: none; /* Ensure no underline on hover */
+        color: #0056b3; /* Optional: Change color on hover */
+    }
         .feature:hover {
             transform: translateY(-10px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
@@ -359,13 +368,12 @@
 
     <main>
         <section class="features" id="features">
-        <h2>Our Features</h2>
         <div class="feature-grid">
-            <div class="feature">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Online Admission</h3>
-                <p>Seamless online admission process for students.</p>
-            </div>
+    <div class="feature">
+        <i class="fas fa-graduation-cap"></i>
+        <h3><a href="AdmissionForm.jsp">Online Admission</a></h3>
+        <p>Seamless online admission process for students.</p>
+    </div>
             <div class="feature">
                 <i class="fas fa-book-open"></i>
                 <h3>Course Management</h3>

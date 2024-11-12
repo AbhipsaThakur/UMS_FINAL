@@ -99,4 +99,14 @@
     <servlet-name>AttendanceServlet</servlet-name>
     <url-pattern>/AttendanceServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdmissionServlet</display-name>
+    <servlet-name>AdmissionServlet</servlet-name>
+    <servlet-class>AdmissionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdmissionServlet</servlet-name>
+    <url-pattern>/AdmissionServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
