@@ -124,6 +124,7 @@
         font-weight: bold;
         margin-bottom: 20px;
         color: #4a90e2;
+        text-align: center;
     }
 
     /* Dashboard grid */
@@ -173,18 +174,65 @@
     }
 
     /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .container {
+            padding: 10px;
+        }
+        .dashboard-grid {
+            width: 100%;
+        }
+        .sidebar {
+            width: 200px;
+        }
+    }
+    
     @media (max-width: 768px) {
         .navbar .username {
             font-size: 14px;
         }
         .dashboard-grid {
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            width: 90%;
         }
         .sidebar {
             width: 220px;
+            left: -220px;
+        }
+        .sidebar.show {
+            left: 0;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .welcome-message {
+            font-size: 22px;
+        }
+        .navbar {
+            padding: 10px;
+        }
+        .navbar .menu-icon, .navbar .user-icon {
+            font-size: 20px;
+        }
+        .sidebar ul li {
+            padding: 10px;
+        }
+        .dashboard-grid {
+            gap: 15px;
+            width: 100%;
+        }
+        .dashboard-item {
+            padding: 20px 10px;
+        }
+        .dashboard-item i {
+            font-size: 36px;
+        }
+        .dashboard-item p {
+            font-size: 16px;
         }
     }
 </style>
+
+
 </head>
 <body>
     <div class="navbar">
@@ -211,18 +259,15 @@
 
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="">Assignments</a></li>
-            <li><a href="teacher_timetable.jsp">Time Table</a></li>
-            <li><a href="facultyPerformance.jsp">Performance</a></li>
-            <li><a href="#">Attendance</a></li>
-            <li><a href="Mentor.jsp">Mentor Mentee</a></li>
-            <li><a href="#">Students</a></li>
-            <li><a href="#">Employees</a></li>
-            <li><a href="#">Examination</a></li>
-            <li><a href="#">Question Bank</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
+        <li><a href="FacultyAssignment.jsp">Assignments</a></li>
+        <li><a href="teacher_timetable.jsp">Time Table</a></li>
+        <li><a href="facultyPerformance.jsp">Performance</a></li>
+        <li><a href="Attendance.jsp">Attendance</a></li>
+        <li><a href="Mentor.jsp">Mentor Mentee</a></li>
+        <li><a href="Student.jsp">Students</a></li>
+        <li><a href="Employee.jsp">Employees</a></li>
+        <li><a href="QuestionBank.jsp">Question Bank</a></li>
+    </ul>
     </div>
 
     <div class="container">
@@ -237,9 +282,10 @@
                 <p><a href="teacher_timetable.jsp">Time Table</a></p>
             </div>
             <div class="dashboard-item">
-                <i class="fas fa-chart-line"></i>
-                <p><a href="facultyPerformance.jsp">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </a>Performance</p></a>
-            </div>
+    			<i class="fas fa-chart-line"></i>
+    			<p><a href="facultyPerformance.jsp">Performance</a></p>
+			</div>
+
             <div class="dashboard-item">
                 <i class="fas fa-calendar-check"></i>
                 <p>Attendance</p>
@@ -250,15 +296,11 @@
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-user-graduate"></i>
-                <p>Students</p>
+                <p><a href="Student.jsp">Students</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-users"></i>
-                <p>Employees</p>
-            </div>
-            <div class="dashboard-item">
-                <i class="fas fa-file-alt"></i>
-                <p>Examination</p>
+                <p><a href="Employee.jsp">Employees</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-book"></i>
@@ -266,11 +308,7 @@
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-chart-bar"></i>
-                <p>Reports</p>
-            </div>
-            <div class="dashboard-item">
-                <i class="fas fa-comments"></i>
-                <p>Feedback</p>
+                <p><a href="Adminresult.jsp">Reports</a></p>
             </div>
         </div>
     </div>
