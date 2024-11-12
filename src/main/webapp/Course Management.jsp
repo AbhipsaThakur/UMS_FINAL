@@ -187,11 +187,11 @@
                 </form>
             </div>
 
-            <!-- Manage Academic Plans -->
-            <div class="card">
-                <h3 class="section-title">Manage Academic Plans</h3>
-                <button class="btn" onclick="window.location.href='academicPlans.jsp'">Go to Academic Plans</button>
-            </div>
+            <div class="form-container">
+          <div class="card">
+        <h3 class="section-title">Manage Course Schedules</h3>
+        <button class="btn" onclick="window.location.href='courses.jsp'">Go to Course Schedules</button>
+         </div>
         </div>
 
         <!-- Course List -->
