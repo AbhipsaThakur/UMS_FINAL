@@ -450,7 +450,7 @@ Designed & Developed by BTech Days Team</h5></center>
         var i, x, tablinks;
         x = document.getElementsByClassName("city");
         for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
+            x[i].style.display = "none";	`
         }
         tablinks = document.getElementsByClassName("tablink");
         for (i = 0; i < tablinks.length; i++) {
