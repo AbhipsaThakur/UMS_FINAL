@@ -31,34 +31,109 @@
     }
 %>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Attendance Page</title>
+    <style>
+        /* Reset and base styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            color: #0b5394;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .attendance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .attendance-table th,
+        .attendance-table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .attendance-table th {
+            background-color: #0b5394;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .attendance-table tr:nth-child(even) {
+            background-color: #f8faff;
+        }
+        .status-present {
+            color: green;
+            font-weight: bold;
+        }
+        .status-absent {
+            color: red;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <h2>Your Attendance</h2>
+    <div class="container">
+        <h2>Your Attendance</h2>
 
-    <table border="1">
-        <tr>
-            <th>Course</th>
-            <th>Date</th>
-            <th>Status</th>
-        </tr>
-        <% 
-            while (rs != null && rs.next()) { 
-        %>
+        <table class="attendance-table">
             <tr>
-                <td><%= rs.getString("course_name") %></td>
-                <td><%= rs.getDate("date") %></td>
-                <td><%= rs.getString("status") %></td>
+                <th>Course</th>
+                <th>Date</th>
+                <th>Status</th>
             </tr>
-        <% 
-            }
-            // Close resources after use
-            if (rs != null) rs.close();
-            if (ps != null) ps.close();
-            if (conn != null) conn.close();
-        %>
-    </table>
+            <% 
+                while (rs != null && rs.next()) { 
+            %>
+                <tr>
+                    <td><%= rs.getString("course_name") %></td>
+                    <td><%= rs.getDate("date") %></td>
+                    <td class="<%= rs.getString("status").equalsIgnoreCase("Present") ? "status-present" : "status-absent" %>">
+                        <%= rs.getString("status") %>
+                    </td>
+                </tr>
+            <% 
+                }
+                // Close resources after use
+                if (rs != null) rs.close();
+                if (ps != null) ps.close();
+                if (conn != null) conn.close();
+            %>
+        </table>
+
+        <div class="footer">
+            <p>&copy; 2024 University Management System</p>
+        </div>
+    </div>
 </body>
 </html>
