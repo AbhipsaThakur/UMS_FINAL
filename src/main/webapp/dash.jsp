@@ -313,8 +313,9 @@
 
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#">Attendance</a></li>
+          
             <li><a href="#">Courses</a></li>
+            <li><a href="StudentAttendance.jsp">Attendance</a></li>
             <li><a href="#">Fees</a></li>
             <li><a href="#">College Info</a></li>
             <li><a href="#">Performance</a></li>
@@ -332,7 +333,7 @@
         <div class="dashboard-grid">
             <div class="dashboard-item attendance">
                 <i class="fas fa-calendar-check"></i>
-                <p>Attendance</p>
+                <p><a href="StudentAttendance.jsp">Attendance</a></p>
             </div>
             <div class="dashboard-item course">
                 <i class="fas fa-book"></i>
