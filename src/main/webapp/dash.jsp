@@ -316,7 +316,7 @@
             <li><a href="Courses.jsp">Courses</a></li>
             <li><a href="StudentAttendance.jsp">Attendance</a></li>
             <li><a href="fee.jsp">Fees</a></li>
-            <li><a href="#CollageInfo.jsp">College Info</a></li>      
+            <li><a href="CollageInfo.jsp">College Info</a></li>      
             <li><a href="StudentResult.jsp">My Report Card</a></li>
             <li><a href="FeedbackForm.jsp">Feedback</a></li>
             <li><a href="student_timetable.jsp">Timetable</a></li>
