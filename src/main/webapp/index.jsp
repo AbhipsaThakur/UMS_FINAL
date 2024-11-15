@@ -376,7 +376,7 @@
     </div>
             <div class="feature">
                 <i class="fas fa-book-open"></i>
-                <h3>Course Management</h3>
+                <h3><a href="Cource Management.jsp">Course Management</a></h3>
                 <p>Manage courses, schedules, and academic plans efficiently.</p>
             </div>
             <div class="feature">
