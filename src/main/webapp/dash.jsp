@@ -312,22 +312,12 @@
     </div>
 
     <div class="sidebar" id="sidebar">
-        <ul>
-<<<<<<< HEAD
-          
+        <ul>         
             <li><a href="Courses.jsp">Courses</a></li>
             <li><a href="StudentAttendance.jsp">Attendance</a></li>
             <li><a href="fee.jsp">Fees</a></li>
             <li><a href="#CollageInfo.jsp">College Info</a></li>      
             <li><a href="StudentResult.jsp">My Report Card</a></li>
-=======
-            <li><a href="#">Attendance</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Fees</a></li>
-            <li><a href="#">College Info</a></li>
-            <li><a href="#">Performance</a></li>
-            <li><a href="#">My Report Card</a></li>
->>>>>>> 3c9870dac7368cd613cdc4c099a7b64402b5f05e
             <li><a href="FeedbackForm.jsp">Feedback</a></li>
             <li><a href="student_timetable.jsp">Timetable</a></li>
             <li><a href="StudentAssignment.jsp">Assignments</a></li>
@@ -393,4 +383,3 @@
 </body>
 
 </html>
-    
