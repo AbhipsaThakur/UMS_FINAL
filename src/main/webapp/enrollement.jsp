@@ -134,7 +134,7 @@
             </table>
 
             <h4>Enrollment Form</h4>
-            <form action="submitEnrollment.jsp" method="post">
+            <form action="index.jsp" method="post">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" class="form-control" id="name" name="name" required>
