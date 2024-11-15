@@ -314,16 +314,15 @@
     <div class="sidebar" id="sidebar">
         <ul>
           
-            <li><a href="#">Courses</a></li>
+            <li><a href="Courses.jsp">Courses</a></li>
             <li><a href="StudentAttendance.jsp">Attendance</a></li>
-            <li><a href="#">Fees</a></li>
-            <li><a href="#">College Info</a></li>
-            <li><a href="#">Performance</a></li>
-            <li><a href="#">My Report Card</a></li>
+            <li><a href="fee.jsp">Fees</a></li>
+            <li><a href="#CollageInfo.jsp">College Info</a></li>      
+            <li><a href="StudentResult.jsp">My Report Card</a></li>
             <li><a href="FeedbackForm.jsp">Feedback</a></li>
             <li><a href="student_timetable.jsp">Timetable</a></li>
-            <li><a href="#">Assignments</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="StudentAssignment.jsp">Assignments</a></li>
+          
         </ul>
     </div>
 
@@ -337,40 +336,33 @@
             </div>
             <div class="dashboard-item course">
                 <i class="fas fa-book"></i>
-                <p>Courses</p>
+                <p><a href="Courses.jsp">Courses</a></p>
             </div>
             <div class="dashboard-item fees">
                 <i class="fas fa-dollar-sign"></i>
-                <p>Fees</p>
+                <p><a href="fee.jsp">Fees</a></p>
             </div>
             <div class="dashboard-item college-info">
                 <i class="fas fa-university"></i>
-                <p>College Info</p>
+                <p><a href="#CollageInfo.jsp">College Info</a></p>
             </div>
-            <div class="dashboard-item performance">
-                <i class="fas fa-chart-line"></i>
-                <p>Performance</p>
-            </div>
+            
             <div class="dashboard-item my-report-card">
                 <i class="fas fa-file-alt"></i>
-                <p>My Report Card</p>
+                <p><a href="StudentResult.jsp">My Report Card</a></p>
             </div>
             <div class="dashboard-item feedback">
                 <i class="fas fa-comments"></i>
-                <p>Feedback</p>
+                <p><a href="FeedbackForm.jsp">Feedback</a></p>
             </div>
             <div class="dashboard-item time-table">
                 <i class="fas fa-clock"></i>
-                <p>Timetable</p>
+                <p><a href="student_timetable.jsp">Timetable</a></p>
             </div>
             <div class="dashboard-item assignment">
                 <i class="fas fa-tasks"></i>
-                <p>Assignments</p>
-            </div>
-            <div class="dashboard-item project">
-                <i class="fas fa-briefcase"></i>
-                <p>Projects</p>
-            </div>
+                <p><a href="StudentAssignment.jsp">Assignments</a></p>
+            </div>            
         </div>
     </div>
 
