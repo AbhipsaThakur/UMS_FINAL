@@ -26,32 +26,38 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 0;
         }
         .container {
             background-color: #ffffff;
-            width: 500px;
-            padding: 20px;
+            width: 80vw; /* Adjusted width to 80% of viewport width */
+            height: 90vh; /* Adjusted height to 90% of viewport height */
+            padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Allow scrolling if content overflows */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .container h2 {
             color: #0b5394;
             text-align: center;
             margin-bottom: 20px;
-            font-size: 24px;
+            font-size: 26px;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         label {
             font-weight: bold;
             color: #0b5394;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             display: block;
         }
         select, input[type="date"] {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -62,42 +68,69 @@
             border-color: #0b5394;
         }
         .students-list {
-            margin-top: 10px;
-            max-height: 150px;
+            margin-top: 15px;
+            max-height: 200px;
             overflow-y: auto;
             border: 1px solid #ccc;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
             background-color: #f8faff;
         }
         .student {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .student input[type="checkbox"] {
-            margin-right: 10px;
+            margin-right: 15px;
             transform: scale(1.2);
         }
         .submit-btn {
             background-color: #0b5394;
             color: #ffffff;
-            padding: 10px 20px;
-            font-size: 18px;
+            padding: 12px 25px;
+            font-size: 20px;
             font-weight: bold;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 30px;
         }
         .submit-btn:hover {
+            background-color: #063d73;
+        }
+
+        /* Styling for new buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .action-buttons button {
+            background-color: #0b5394;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 48%;
+        }
+        .action-buttons button:hover {
             background-color: #063d73;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Action buttons for adding and deleting subjects -->
+        <div class="action-buttons">
+            <button type="button" onclick="window.location.href='AddCourse.jsp'">Add New Subject</button>
+           
+        </div>
+
         <h2>Mark Attendance</h2>
         <form action="markAttendance.jsp" method="post">
             <!-- Course Selection -->
