@@ -275,7 +275,7 @@
         <div class="dashboard-grid">
             <div class="dashboard-item">
                 <i class="fas fa-tasks"></i>
-                <p><a href="">Assignments</a></p>
+                <p><a href="FacultyAssignment.jsp">Assignments</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-clock"></i>
@@ -288,7 +288,7 @@
 
             <div class="dashboard-item">
                 <i class="fas fa-calendar-check"></i>
-                <p>Attendance</p>
+                <p><a href="FacultyAttendance.jsp">Attendance</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-user-friends"></i>
@@ -304,7 +304,7 @@
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-book"></i>
-                <p>Question Bank</p>
+                <p><a href="QuestionBank.jsp">Question Bank</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-chart-bar"></i>
