@@ -14,7 +14,7 @@ try{
 	Connection con = ConnectionProvider.getCon();
 	Statement st = con.createStatement();
 	st.executeUpdate("insert into result values('"+rollNo+"', '"+Physics+"', '"+Chemistry+"', '"+Mathematics+"', '"+Electrical+"', '"+Electronic+"', '"+ChemistryLab+"', '"+PhysicsLab+"')");
-	response.sendRedirect("Adminresult.jsp");
+	response.sendRedirect("AdminResult.jsp");
 }catch(Exception e){
 	out.println(e);
 }

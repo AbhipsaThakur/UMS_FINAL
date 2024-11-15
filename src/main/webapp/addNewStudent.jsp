@@ -12,7 +12,7 @@ try{
 	Connection con = ConnectionProvider.getCon();
 	Statement st = con.createStatement();
 	st.executeUpdate("insert into addstudentresult values('"+course+"', '"+branch+"', '"+rollNo+"', '"+name+"', '"+fatherName+"', '"+gender+"')");
-	response.sendRedirect("Adminresult.jsp");
+	response.sendRedirect("AdminResult.jsp");
 }catch(Exception e){
 	out.println(e);
 }
