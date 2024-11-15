@@ -127,122 +127,122 @@
         <div class="schedule-grid">
             <!-- Mentor Blocks with Schedule -->
             <div class="mentor-block">
-                <h3>Mentor: Dr. Alice Johnson</h3>
+                <h3>Mentor: Dr. Ravi Kumar</h3>
                 <p><strong>Next Session:</strong> December 5, 2024</p>
                 <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
                 <p><strong>Location:</strong> Room 101</p>
                 <h4>Students</h4>
                 <ul class="student-list">
-                    <li>Student A</li>
-                    <li>Student B</li>
-                    <li>Student C</li>
-                    <li>Student D</li>
-                    <li>Student E</li>
-                    <li>Student F</li>
-                    <li>Student G</li>
-                    <li>Student H</li>
-                    <li>Student I</li>
-                    <li>Student J</li>
+                    <li>Aarav Patel</li>
+                    <li>Advit Sharma</li>
+                    <li>Ashwin Yadav</li>
+                    <li>Diya Singh</li>
+                    <li>Devika Mehta</li>
+                    <li>Iqra Khan</li>
+                    <li>Himanshu Verma</li>
+                    <li>Priya Joshi</li>
+                    <li>Shivani Gupta</li>
+                    <li>Mohit Choudhary</li>
                 </ul>
             </div>
 
             <div class="mentor-block">
-                <h3>Mentor: Prof. Brian Smith</h3>
+                <h3>Mentor: Prof. Neha Desai</h3>
                 <p><strong>Next Session:</strong> December 10, 2024</p>
                 <p><strong>Time:</strong> 2:00 PM - 4:00 PM</p>
                 <p><strong>Location:</strong> Room 102</p>
                 <h4>Students</h4>
                 <ul class="student-list">
-                    <li>Student K</li>
-                    <li>Student L</li>
-                    <li>Student M</li>
-                    <li>Student N</li>
-                    <li>Student O</li>
-                    <li>Student P</li>
-                    <li>Student Q</li>
-                    <li>Student R</li>
-                    <li>Student S</li>
-                    <li>Student T</li>
+                    <li>Rohit Kumar</li>
+                    <li>Ayaan Malik</li>
+                    <li>Meera Kapoor</li>
+                    <li>Kavya Sharma</li>
+                    <li>Riya Soni</li>
+                    <li>Tarun Bansal</li>
+                    <li>Raghav Joshi</li>
+                    <li>Deepika Rani</li>
+                    <li>Anushka Gupta</li>
+                    <li>Varun Joshi</li>
                 </ul>
             </div>
 
             <div class="mentor-block">
-                <h3>Mentor: Dr. Sarah Lee</h3>
+                <h3>Mentor: Dr. Sandeep Yadav</h3>
                 <p><strong>Next Session:</strong> December 15, 2024</p>
                 <p><strong>Time:</strong> 9:00 AM - 11:00 AM</p>
                 <p><strong>Location:</strong> Room 103</p>
                 <h4>Students</h4>
                 <ul class="student-list">
-                    <li>Student U</li>
-                    <li>Student V</li>
-                    <li>Student W</li>
-                    <li>Student X</li>
-                    <li>Student Y</li>
-                    <li>Student Z</li>
-                    <li>Student AA</li>
-                    <li>Student AB</li>
-                    <li>Student AC</li>
-                    <li>Student AD</li>
+                    <li>Suman Kumari</li>
+                    <li>Rajat Kumar</li>
+                    <li>Amit Yadav</li>
+                    <li>Vikram Singh</li>
+                    <li>Shruti Verma</li>
+                    <li>Ravindra Pandey</li>
+                    <li>Soniya Chaudhary</li>
+                    <li>Pranav Singh</li>
+                    <li>Anjali Verma</li>
+                    <li>Kritika Soni</li>
                 </ul>
             </div>
 
             <div class="mentor-block">
-                <h3>Mentor: Dr. Emma Wilson</h3>
+                <h3>Mentor: Dr. Aarti Verma</h3>
                 <p><strong>Next Session:</strong> December 20, 2024</p>
                 <p><strong>Time:</strong> 11:00 AM - 1:00 PM</p>
                 <p><strong>Location:</strong> Room 104</p>
                 <h4>Students</h4>
                 <ul class="student-list">
-                    <li>Student AE</li>
-                    <li>Student AF</li>
-                    <li>Student AG</li>
-                    <li>Student AH</li>
-                    <li>Student AI</li>
-                    <li>Student AJ</li>
-                    <li>Student AK</li>
-                    <li>Student AL</li>
-                    <li>Student AM</li>
-                    <li>Student AN</li>
+                    <li>Ayushi Sethi</li>
+                    <li>Siddhi Sharma</li>
+                    <li>Akash Patel</li>
+                    <li>Anuj Bhardwaj</li>
+                    <li>Simran Kaur</li>
+                    <li>Yogesh Kumar</li>
+                    <li>Nandini Gupta</li>
+                    <li>Sonal Mehta</li>
+                    <li>Manisha Chaudhary</li>
+                    <li>Pooja Rani</li>
                 </ul>
             </div>
 
             <div class="mentor-block">
-                <h3>Mentor: Prof. Michael Brown</h3>
+                <h3>Mentor: Prof. Rahul Joshi</h3>
                 <p><strong>Next Session:</strong> December 25, 2024</p>
                 <p><strong>Time:</strong> 3:00 PM - 5:00 PM</p>
                 <p><strong>Location:</strong> Room 105</p>
                 <h4>Students</h4>
                 <ul class="student-list">
-                    <li>Student AO</li>
-                    <li>Student AP</li>
-                    <li>Student AQ</li>
-                    <li>Student AR</li>
-                    <li>Student AS</li>
-                    <li>Student AT</li>
-                    <li>Student AU</li>
-                    <li>Student AV</li>
-                    <li>Student AW</li>
-                    <li>Student AX</li>
+                    <li>Parul Shah</li>
+                    <li>Ravindra Saini</li>
+                    <li>Mehul Joshi</li>
+                    <li>Karan Bhatt</li>
+                    <li>Ankush Kapoor</li>
+                    <li>Chirag Singh</li>
+                    <li>Sarita Soni</li>
+                    <li>Sahil Kumar</li>
+                    <li>Harshita Chaudhary</li>
+                    <li>Rajendra Kumar</li>
                 </ul>
             </div>
 
             <div class="mentor-block">
-                <h3>Mentor: Dr. John Doe</h3>
-                <p><strong>Next Session:</strong> January 1, 2025</p>
+                <h3>Mentor: Dr. Vikram Sharma</h3>
+                 <p><strong>Next Session:</strong> January 1, 2025</p>
                 <p><strong>Time:</strong> 8:00 AM - 10:00 AM</p>
                 <p><strong>Location:</strong> Room 106</p>
                 <h4>Students</h4>
                 <ul class="student-list">
-                    <li>Student AY</li>
-                    <li>Student AZ</li>
-                    <li>Student BA</li>
-                    <li>Student BB</li>
-                    <li>Student BC</li>
-                    <li>Student BD</li>
-                    <li>Student BE</li>
-                    <li>Student BF</li>
-                    <li>Student BG</li>
-                    <li>Student BH</li>
+                    <li>Shivendra Tiwari</li>
+                    <li>Aman Rathi</li>
+                    <li>Sonali Patil</li>
+                    <li>Snehal Verma</li>
+                    <li>Sumit Rathi</li>
+                    <li>Vishal Yadav</li>
+                    <li>Priti Pandey</li>
+                    <li>Vikash Soni</li>
+                    <li>Shubham Bansal</li>
+                    <li>Shikha Mehta</li>
                 </ul>
             </div>
         </div>
