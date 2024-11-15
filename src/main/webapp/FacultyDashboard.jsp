@@ -19,7 +19,7 @@
 
     /* Navbar styling */
     .navbar {
-        background: linear-gradient(90deg, #6ca0dc, #f3e5ab);
+        background-color: #0066cc; /* Blue color */
         color: white;
         padding: 15px;
         display: flex;
@@ -63,6 +63,20 @@
         display: block;
         opacity: 1;
     }
+    /* Logout button styling */
+    .navbar .logout-btn {
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 8px 16px;
+        text-align: center;
+        transition: color 0.3s ease;
+    }
+    .navbar .logout-btn:hover {
+        color: #ffcc00; /* Highlight color for hover */
+    }
 
     /* Sidebar styling */
     .sidebar {
@@ -97,7 +111,7 @@
         transition: color 0.3s;
     }
     .sidebar ul li a:hover {
-        color: #6ca0dc;
+        color: #0066cc; /* Blue hover effect */
     }
     .sidebar.show {
         left: 0;
@@ -154,7 +168,7 @@
     .dashboard-item i {
         font-size: 48px;
         margin-bottom: 10px;
-        color: #6ca0dc;
+        color: #0066cc;
         transition: color 0.3s;
     }
     .dashboard-item p {
@@ -165,7 +179,7 @@
 
     /* Footer styling */
     footer {
-        background-color: #6ca0dc;
+        background-color: #0066cc;
         color: white;
         text-align: center;
         padding: 15px 0;
@@ -221,6 +235,7 @@
             width: 100%;
         }
         .dashboard-item {
+        	
             padding: 20px 10px;
         }
         .dashboard-item i {
@@ -231,6 +246,7 @@
         }
     }
 </style>
+
 
 
 </head>
@@ -259,7 +275,6 @@
 
     <div class="sidebar" id="sidebar">
         <ul>
-        <li><a href="FacultyAssignment.jsp">Assignments</a></li>
         <li><a href="teacher_timetable.jsp">Time Table</a></li>
         <li><a href="facultyPerformance.jsp">Performance</a></li>
         <li><a href="FacultyAttendance.jsp">Attendance</a></li>
@@ -267,6 +282,7 @@
         <li><a href="Student.jsp">Students</a></li>
         <li><a href="Employee.jsp">Employees</a></li>
         <li><a href="QuestionBank.jsp">Question Bank</a></li>
+        <li><a href="logout.jsp">logout</a></li>
     </ul>
     </div>
 
@@ -274,41 +290,37 @@
         <p class="welcome-message">Welcome to the Faculty Dashboard</p>
         <div class="dashboard-grid">
             <div class="dashboard-item">
-                <i class="fas fa-tasks"></i>
-                <p><a href="FacultyAssignment.jsp">Assignments</a></p>
-            </div>
-            <div class="dashboard-item">
                 <i class="fas fa-clock"></i>
-                <p><a href="teacher_timetable.jsp">Time Table</a></p>
+                <p><a href="teacher_timetable.jsp" style="text-decoration:none;">Time Table</a></p>
             </div>
             <div class="dashboard-item">
     			<i class="fas fa-chart-line"></i>
-    			<p><a href="facultyPerformance.jsp">Performance</a></p>
+    			<p><a href="facultyPerformance.jsp" style="text-decoration:none;">Performance</a></p>
 			</div>
 
             <div class="dashboard-item">
                 <i class="fas fa-calendar-check"></i>
-                <p><a href="FacultyAttendance.jsp">Attendance</a></p>
+                <p><a href="FacultyAttendance.jsp" style="text-decoration:none;">Attendance</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-user-friends"></i>
-                <p><a href="Mentor.jsp">Mentor Mentee</a></p>
+                <p><a href="Mentor.jsp" style="text-decoration:none;">Mentor Mentee</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-user-graduate"></i>
-                <p><a href="Student.jsp">Students</a></p>
+                <p><a href="Student.jsp" style="text-decoration:none;">Students</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-users"></i>
-                <p><a href="Employee.jsp">Employees</a></p>
+                <p><a href="Employee.jsp" style="text-decoration:none;">Employees</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-book"></i>
-                <p><a href="QuestionBank.jsp">Question Bank</a></p>
+                <p><a href="QuestionBank.jsp" style="text-decoration:none;">Question Bank</a></p>
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-chart-bar"></i>
-                <p><a href="Adminresult.jsp">Reports</a></p>
+                <p><a href="AdminResult.jsp" style="text-decoration:none;">Reports</a></p>
             </div>
         </div>
     </div>
