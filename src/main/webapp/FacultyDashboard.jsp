@@ -281,7 +281,9 @@
         <li><a href="Mentor.jsp">Mentor Mentee</a></li>
         <li><a href="Student.jsp">Students</a></li>
         <li><a href="Employee.jsp">Employees</a></li>
+        <li><a href="Adminresult.jsp">Reports</a></li>
         <li><a href="QuestionBank.jsp">Question Bank</a></li>
+        
         <li><a href="logout.jsp">logout</a></li>
     </ul>
     </div>
@@ -320,7 +322,7 @@
             </div>
             <div class="dashboard-item">
                 <i class="fas fa-chart-bar"></i>
-                <p><a href="AdminResult.jsp" style="text-decoration:none;">Reports</a></p>
+                <p><a href="Adminresult.jsp" style="text-decoration:none;">Reports</a></p>
             </div>
         </div>
     </div>
