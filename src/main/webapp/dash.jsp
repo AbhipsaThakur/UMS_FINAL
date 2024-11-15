@@ -320,7 +320,7 @@
             <li><a href="StudentResult.jsp">My Report Card</a></li>
             <li><a href="FeedbackForm.jsp">Feedback</a></li>
             <li><a href="student_timetable.jsp">Timetable</a></li>
-            <li><a href="StudentAssignment.jsp">Assignments</a></li>
+            <li><a href="logout.jsp">logout</a></li>
           
         </ul>
     </div>
@@ -331,7 +331,7 @@
         <div class="dashboard-grid">
             <div class="dashboard-item attendance">
                 <i class="fas fa-calendar-check"></i>
-                <p>Attendance</p>
+                <p><a href="StudentAttendance.jsp">Attendance</a></p>
             </div>
             <div class="dashboard-item course">
                 <i class="fas fa-book"></i>
@@ -343,7 +343,7 @@
             </div>
             <div class="dashboard-item college-info">
                 <i class="fas fa-university"></i>
-                <p><a href="#CollageInfo.jsp">College Info</a></p>
+                <p><a href="CollageInfo.jsp">College Info</a></p>
             </div>
             
             <div class="dashboard-item my-report-card">
@@ -357,10 +357,6 @@
             <div class="dashboard-item time-table">
                 <i class="fas fa-clock"></i>
                 <p><a href="student_timetable.jsp">Timetable</a></p>
-            </div>
-            <div class="dashboard-item assignment">
-                <i class="fas fa-tasks"></i>
-                <p><a href="StudentAssignment.jsp">Assignments</a></p>
             </div>            
         </div>
     </div>
