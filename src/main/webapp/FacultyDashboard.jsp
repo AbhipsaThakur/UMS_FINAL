@@ -262,7 +262,7 @@
         <li><a href="FacultyAssignment.jsp">Assignments</a></li>
         <li><a href="teacher_timetable.jsp">Time Table</a></li>
         <li><a href="facultyPerformance.jsp">Performance</a></li>
-        <li><a href="FacultyAttendance.jsp">Attendance</a></li>
+        <li><a href="Attendance.jsp">Attendance</a></li>
         <li><a href="Mentor.jsp">Mentor Mentee</a></li>
         <li><a href="Student.jsp">Students</a></li>
         <li><a href="Employee.jsp">Employees</a></li>
