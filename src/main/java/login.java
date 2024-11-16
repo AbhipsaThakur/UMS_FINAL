@@ -48,7 +48,7 @@ public class login extends HttpServlet {
                 session.setAttribute("username", username);
 
                 // Check if the user is a faculty member
-                if (email.endsWith("@faculty.com")) {
+                if (email.endsWith("@admin.com")) {
                     // Fetch faculty_id from faculty table
                     String facultyQuery = "SELECT faculty_id FROM faculty WHERE email = ?";
                     PreparedStatement facultyPs = con.prepareStatement(facultyQuery);
